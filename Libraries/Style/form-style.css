@@ -1,5 +1,61 @@
 @import url(palette.css);
+@import url(fonts.css);
 
 .info-form {
-    border: 1px solid var(--primary);
+    margin: 5%;
+    padding: 5%;
+    background-color: var(--grey-light);
+    border: 3px solid var(--grey);
+    box-shadow: 0 5px 5px var(--grey);
+    border-radius: 10px;
+    font-family: "Noto Sans";
+}
+
+.info-form legend {
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.info-form .field {
+    display: flex;
+    flex-direction: column;
+    margin: 5% 0;
+}
+
+.info-form .field label {
+    font-weight: bold;
+}
+
+.info-form .field input,
+.info-form .field select {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.info-form input.invalid {
+    background-color: #ffdddd;
+}
+
+.tab {
+    display: none;
+}
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+.step.finish {
+    background-color: #04AA6D;
 }

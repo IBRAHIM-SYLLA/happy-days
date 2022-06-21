@@ -7,4 +7,26 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="../Style/style.css">
+
+    <?php
+    // vérifie si l'user est sur mobile ou non
+    function isMobile() {
+        return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+    }
+
+    if(isMobile()) {
+        ?>
+        <!-- METTRE LES SCRIPTS MOBILE ICI -->
+        <script src="../Scripts/mob-tabs-manager.js"></script>
+        <?php
+    }
+    ?>
 </head>
+<body>
+
+<header>
+    <!-- Header ici -->
+    <h1>Header</h1>
+</header>
+
+<main>

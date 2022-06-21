@@ -1,0 +1,17 @@
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    background-size: 100%;
+}
+
+#prevBtn {
+    background-image: url(./Icons/left-arrow.png);
+    float: left;
+}
+
+#nextBtn {
+    background-image: url(./Icons/right-arrow.png);
+    float: right;
+}
