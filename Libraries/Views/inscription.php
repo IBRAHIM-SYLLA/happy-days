@@ -43,9 +43,6 @@
         <label for ="password_conf">Confirmez le mot de passe :</label>
         <input id="password_conf" type="password" name="password_conf" placeholder="Confirmez le mot de passe" />
 
-        <label for="id_right"  placeholder="">droit</label>
-        <input type="number" name="id_right">
-
         <button id="register" type="submit" name="register">Creer un compte</button>
         <p>Vous avez déjà un compte ? <br><a href="connexion.php">Connectez vous</a></p>
     </form>
