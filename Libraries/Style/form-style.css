@@ -1,0 +1,5 @@
+@import url(palette.css);
+
+.info-form {
+    border: 1px solid var(--primary);
+}

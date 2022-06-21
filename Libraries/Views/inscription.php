@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form class="info-form" action="" method="post">
         <legend>Saisir toutes vos informations</legend>
         <select name="civility" id="">
             <option value="choisir">Choisir une option</option>
