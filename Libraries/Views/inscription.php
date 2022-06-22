@@ -7,7 +7,7 @@ include_once '../Imports/header.php';
 <form class="info-form" action="" method="post">
     <legend>Inscription</legend>
 
-    <div class="tab">
+    <div class="tab" className="tab">
         <div class="field">
             <label for="civility">Civilité</label>
             <select name="civility" id="">
@@ -29,7 +29,7 @@ include_once '../Imports/header.php';
         </div>
     </div>
 
-    <div class="tab">
+    <div class="tab" className="tab">
         <div class="field">
             <label for ="adress">Adresse</label>
             <input id="adress" type="text" name="adress" placeholder="1, Rue Victor Hugo" autocomplete="off">
@@ -46,7 +46,7 @@ include_once '../Imports/header.php';
         </div>
     </div>
 
-    <div class="tab">
+    <div class="tab" className="tab">
         <div class="field">
             <label for ="phone_number">N° de téléphone</label>
             <input id="phone_number" type="text" name="phone_number" placeholder="01.23.45.67.89" />
@@ -84,6 +84,7 @@ include_once '../Imports/header.php';
         </div>
 
         <div style="text-align:center; margin-top:40px;">
+            <span class="step"></span>
             <span class="step"></span>
             <span class="step"></span>
             <span class="step"></span>

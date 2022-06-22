@@ -13,7 +13,8 @@ document.querySelector('#nextBtn').addEventListener('click', nextPrev(1));
 function showTab(n) {
 
     let x = document.getElementsByClassName('tab');
-    x[n].style.display = 'block';
+    // x[n].style.display = 'block';
+    console.log(x[n]);
     
     if (n == 0) {
         document.getElementById("prevBtn").style.display = "none";
@@ -34,15 +35,16 @@ function showTab(n) {
 
 function nextPrev(n) {
 
-    let x = document.querySelectorAll('.tab');
+    let x = document.getElementsByClassName('tab');
     
     if(n == 1 && !validateForm()) return false;
 
     x[currTab].style.display = 'none';
+    
     currTab += n;
 
     if(currTab >= x.length) {
-        document.querySelector('.info-form').submit();
+        document.getElementByClass('info-form').submit();
         return false;
     }
 

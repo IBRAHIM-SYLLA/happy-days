@@ -4,9 +4,9 @@
 .info-form {
     margin: 5%;
     padding: 5%;
-    background-color: var(--grey-light);
-    border: 3px solid var(--grey);
-    box-shadow: 0 5px 5px var(--grey);
+    background-color: var(--primary-light);
+    border: 3px solid var(--primary);
+    box-shadow: 0 5px 5px var(--primary);
     border-radius: 10px;
     font-family: "Noto Sans";
 }
