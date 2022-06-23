@@ -7,6 +7,13 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./Libraries/Style/style.css">
+
+    <?php
+    // vérifie si l'user est sur mobile ou non
+    function isMobile() {
+        return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+    }
+    ?>
 </head>
 <body>
 

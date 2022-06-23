@@ -10,6 +10,13 @@
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: center;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+.icon-btn:hover {
+    cursor: pointer;
+    background-color: var(--primary);
 }
 
 #prevBtn {

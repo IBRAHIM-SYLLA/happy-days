@@ -10,8 +10,8 @@ include_once '../Imports/header.php';
     <div class="tab">
         <p class="sub-text">Parlez-nous un peu de vous...</p>
         <div class="field">
-            <label for="civility">Civilité</label>
-            <select name="civility" id="">
+            <label for="civility"><span class="required-symbol">-</span> Civilité</label>
+            <select name="civility" id="" required>
                 <option value="choisir">Choisir une option</option>
                 <option value="homme">Homme</option>
                 <option value="femme">Femme</option>
@@ -20,54 +20,54 @@ include_once '../Imports/header.php';
 
 
         <div class="field">
-            <label for ="firtname">Nom</label>
-            <input id="firstname" type="text" name="firstname" placeholder="Dupont" />
+            <label for ="firtname"><span class="required-symbol">-</span> Nom</label>
+            <input id="firstname" type="text" name="firstname" placeholder="Dupont" required/>
         </div>
 
         <div class="field">
-            <label for ="lastname">Prénom</label>
-            <input id="lastname" type="text" name="lastname" placeholder="Jean" autocomplete="off">
+            <label for ="lastname"><span class="required-symbol">-</span> Prénom</label>
+            <input id="lastname" type="text" name="lastname" placeholder="Jean" autocomplete="off"required>
         </div>
     </div>
 
     <div class="tab">
         <p class="sub-text">Veuillez entrer vos coordonnées (1/2)</p>
         <div class="field">
-            <label for ="adress">Adresse</label>
-            <input id="adress" type="text" name="adress" placeholder="1, Rue Victor Hugo" autocomplete="off">
+            <label for ="adress"><span class="required-symbol">-</span> Adresse</label>
+            <input id="adress" type="text" name="adress" placeholder="1, Rue Victor Hugo" autocomplete="off"required>
         </div>
 
         <div class="field">
-            <label for ="zip_code">Code postal</label>
-            <input id="zip_code" type="text" name="zip_code" placeholder="01234" />
+            <label for ="zip_code"><span class="required-symbol">-</span> Code postal</label>
+            <input id="zip_code" type="text" name="zip_code" placeholder="01234" required/>
         </div>
 
         <div class="field">
-            <label for ="city">Ville</label>
-            <input id="city" type="text" name="city" placeholder="Quelque-part" />
+            <label for ="city"><span class="required-symbol">-</span> Ville</label>
+            <input id="city" type="text" name="city" placeholder="Quelque-part" required/>
         </div>
     </div>
 
     <div class="tab">
         <p class="sub-text">Veuillez entrer vos coordonnées (2/2)</p>
         <div class="field">
-            <label for ="phone_number">N° de téléphone</label>
-            <input id="phone_number" type="text" name="phone_number" placeholder="01.23.45.67.89" />
+            <label for ="phone_number"><span class="required-symbol">-</span> N° de téléphone</label>
+            <input id="phone_number" type="text" name="phone_number" placeholder="01.23.45.67.89" required/>
         </div>
 
         <div class="field">
-            <label for ="email">Email</label>
-            <input id="email" type="text" name="email" placeholder="email@mail.com" autocomplete="off">
+            <label for ="email"><span class="required-symbol">-</span> Email</label>
+            <input id="email" type="text" name="email" placeholder="email@mail.com" autocomplete="off"required>
         </div>
 
         <div class="field">
-            <label for ="password">Mot de passe</label>
-            <input id="password" type="password" name="password" placeholder="Mot de passe" />
+            <label for ="password"><span class="required-symbol">-</span> Mot de passe</label>
+            <input id="password" type="password" name="password" placeholder="Mot de passe" required/>
         </div>
 
         <div class="field">
-            <label for ="password_conf">Confirmez le mot de passe</label>
-            <input id="password_conf" type="password" name="password_conf" placeholder="Confirmez le mot de passe" />
+            <label for ="password_conf"><span class="required-symbol">-</span> Confirmez le mot de passe</label>
+            <input id="password_conf" type="password" name="password_conf" placeholder="Confirmez le mot de passe" required/>
         </div>
     </div>
 
@@ -78,22 +78,13 @@ include_once '../Imports/header.php';
 
     <p class="connexion-suggestion">Vous avez déjà un compte ? <br><a href="connexion.php">Connectez vous</a></p>
     
-    <?php 
-    if(isMobile()) {
-    ?>
-        <div style="overflow: auto;">
-            <button type="button" id="prevBtn" class="icon-btn" onclick="nextPrev(-1)"></button>
+    <div style="overflow: auto;">
+        <button type="button" id="prevBtn" class="icon-btn"></button>
 
-            <button type="button" id="nextBtn" class="icon-btn" onclick="nextPrev(1)"></button>
-        </div>
+        <button type="button" id="nextBtn" class="icon-btn"></button>
+    </div>
 
-        <div style="text-align:center; margin-top:40px;">
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-        </div>
-    <?php } ?>
+    <div style="text-align:center; margin-top:40px;" id="step-cont"></div>
 
 </form>
 
