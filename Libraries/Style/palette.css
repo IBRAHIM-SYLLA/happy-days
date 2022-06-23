@@ -1,5 +1,6 @@
 :root {
     --primary: #F07900;
+    --primary-lighter: #ffba6f;
     --primary-light: #F8A145;
     --primary-dark: #D35100;
 
@@ -10,4 +11,6 @@
     --grey: #d7d7d7;
     --grey-light: #f0f0f0;
     --grey-dark: #c0c0c0;
+
+    --bg-color: #ffd7ac;
 }

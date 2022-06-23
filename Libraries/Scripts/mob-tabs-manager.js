@@ -1,19 +1,9 @@
 // code copié sans vergogne sur w3schools lol
 
-document.addEventListener('DOMContentLoaded', () => {
-
-let currTab = 0;
-showTab(currTab);
-
-
-document.querySelector('#prevBtn').addEventListener('click', nextPrev(-1));
-document.querySelector('#nextBtn').addEventListener('click', nextPrev(1));
-
-
 function showTab(n) {
-
+    
     let x = document.getElementsByClassName('tab');
-    // x[n].style.display = 'block';
+    x[n].style.display = 'block';
     console.log(x[n]);
     
     if (n == 0) {
@@ -22,14 +12,14 @@ function showTab(n) {
     else {
         document.getElementById("prevBtn").style.display = "inline";
     }
-      
+    
     if (n == (x.length - 1)) {
-        document.getElementById("nextBtn").innerHTML = "Terminer";
+        document.getElementById("nextBtn").style.backgroundImage = "url(../Style/Icons/checkmark.png)";
     } 
     else {
-        document.getElementById("nextBtn").innerHTML = "Suivant";
+        document.getElementById("nextBtn").style.backgroundImage = "url(../Style/Icons/right-arrow.png)";
     }
-
+    
     fixStepIndicator(n);
 }
 
@@ -81,5 +71,15 @@ function fixStepIndicator(n) {
 
     x[n].className += "active";
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+let currTab = 0;
+showTab(currTab);
+
+
+// document.querySelector('#prevBtn').addEventListener('click', nextPrev(-1));
+// document.querySelector('#nextBtn').addEventListener('click', nextPrev(1));
 
 });

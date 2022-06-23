@@ -7,7 +7,8 @@ include_once '../Imports/header.php';
 <form class="info-form" action="" method="post">
     <legend>Inscription</legend>
 
-    <div class="tab" className="tab">
+    <div class="tab">
+        <p class="sub-text">Parlez-nous un peu de vous...</p>
         <div class="field">
             <label for="civility">Civilité</label>
             <select name="civility" id="">
@@ -29,7 +30,8 @@ include_once '../Imports/header.php';
         </div>
     </div>
 
-    <div class="tab" className="tab">
+    <div class="tab">
+        <p class="sub-text">Veuillez entrer vos coordonnées (1/2)</p>
         <div class="field">
             <label for ="adress">Adresse</label>
             <input id="adress" type="text" name="adress" placeholder="1, Rue Victor Hugo" autocomplete="off">
@@ -46,7 +48,8 @@ include_once '../Imports/header.php';
         </div>
     </div>
 
-    <div class="tab" className="tab">
+    <div class="tab">
+        <p class="sub-text">Veuillez entrer vos coordonnées (2/2)</p>
         <div class="field">
             <label for ="phone_number">N° de téléphone</label>
             <input id="phone_number" type="text" name="phone_number" placeholder="01.23.45.67.89" />
@@ -68,19 +71,20 @@ include_once '../Imports/header.php';
         </div>
     </div>
 
-    <div id="hide-until-done">
-        <button id="register" type="submit" name="register">Créer un compte</button>    
+    <div class="tab">
+        <p class="sub-text">Dernière étape !</p>
+        <button id="register" type="submit" name="register">Créer un compte</button>
     </div>
-    
-    <p>Vous avez déjà un compte ? <br><a href="connexion.php">Connectez vous</a></p>
+
+    <p class="connexion-suggestion">Vous avez déjà un compte ? <br><a href="connexion.php">Connectez vous</a></p>
     
     <?php 
     if(isMobile()) {
     ?>
         <div style="overflow: auto;">
-            <button type="button" id="prevBtn" class="icon-btn"></button>
+            <button type="button" id="prevBtn" class="icon-btn" onclick="nextPrev(-1)"></button>
 
-            <button type="button" id="nextBtn" class="icon-btn"></button>
+            <button type="button" id="nextBtn" class="icon-btn" onclick="nextPrev(1)"></button>
         </div>
 
         <div style="text-align:center; margin-top:40px;">

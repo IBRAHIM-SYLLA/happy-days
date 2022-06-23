@@ -6,7 +6,8 @@
     padding: 5%;
     background-color: var(--primary-light);
     border: 3px solid var(--primary);
-    box-shadow: 0 5px 5px var(--primary);
+    border-top-width: 2px;
+    box-shadow: 0 10px 0px var(--primary);
     border-radius: 10px;
     font-family: "Noto Sans";
 }
@@ -31,10 +32,14 @@
 .info-form .field select {
     width: 90%;
     margin-left: 5%;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .info-form input.invalid {
-    background-color: #ffdddd;
+    background-color: var(--primary-dark);
 }
 
 .tab {
@@ -45,7 +50,7 @@
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbbbbb;
+    background-color: var(--primary-dark);
     border: none;
     border-radius: 50%;
     display: inline-block;
@@ -57,5 +62,9 @@
 }
 
 .step.finish {
-    background-color: #04AA6D;
+    background-color: var(--primary-light);
+}
+
+.connexion-suggestion {
+    text-align: center;
 }

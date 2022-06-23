@@ -1,5 +1,6 @@
 @import url(form-style.css);
-
+@import url(icons.css);
+@import url(palette.css);
 
 * {
     margin: 0;
@@ -9,6 +10,7 @@
 body {
     min-width: 100%;
     min-height: 100%;
+    background-color: var(--bg-color);
 }
 
 header {
@@ -25,4 +27,9 @@ footer {
     width: 100%;
     position: absolute;
     bottom: 0;
+}
+
+.sub-text {
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
 }
