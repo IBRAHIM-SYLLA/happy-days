@@ -57,7 +57,7 @@ include_once '../Imports/header.php';
 
         <div class="field">
             <label for ="email"><span class="required-symbol">-</span> Email</label>
-            <input id="email" type="text" name="email" placeholder="email@mail.com" autocomplete="off"required>
+            <input id="email" type="text" name="email" placeholder="email@mail.com" autocomplete="off" required>
         </div>
 
         <div class="field">
