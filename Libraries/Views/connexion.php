@@ -1,27 +1,39 @@
 <?php
 session_start();
 require_once '../Controllers/connexion.php';
-
+include_once '../Imports/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
- <?php   var_dump($_SESSION) ?>
-    <form action="" method="post">
-        <label for="email">Email</label>
-        <input type="text" name="email" id="">
 
-        <label for="password">Mot de passe</label>
-        <input type="text" name="password" id="">
+<form class="info-form" action="" method="post">
+    <legend>Connexion</legend>
+    
+    <div class="tab final-step">
+        <p class="sub-text">Entrez vos identifiants</p>
 
-        <button type="submit" name="connect">Connexion</button>
-        <a href="inscription.php">insss</a>
-    </form>
-</body>
-</html>
+        <div class="field">
+            <label for="email"><span class="required-symbol">-</span> Email</label>
+            <input type="text" name="email" id="" placeholder="email@mail.com" required>
+        </div>      
+        
+        <div class="field">
+            <label for="password"><span class="required-symbol">-</span> Mot de passe</label>
+            <input type="text" name="password" id="" placeholder="Mot de passe" required>
+        </div>
+
+        <p class="connexion-suggestion">Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous</a></p>
+        
+            <button id="register" type="submit" name="register" class="icon-btn">Se connecter</button>
+        
+    
+        <!-- <div style="overflow:auto;">
+            <button type="submit" id="privBtn" name="connect" class="icon-btn"></button>
+            <button type="submit" id="nextBtn" name="connect" class="icon-btn"></button>
+        </div> -->
+    
+        <div style="text-align:center; margin-top:40px;" id="step-cont"></div>
+    </div>
+
+</form>
+
+<?php include_once '../Imports/footer.php';
+?>
