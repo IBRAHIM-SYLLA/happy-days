@@ -13,4 +13,9 @@
     --grey-dark: #c0c0c0;
 
     --bg-color: #ffd7ac;
+
+    --valid-color: rgb(69, 243, 69);
+    --alert-color: yellow;
+    --danger-color: red;
+    --info-color: rgb(86, 86, 255);
 }

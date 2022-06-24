@@ -3,41 +3,40 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const tabs = document.querySelectorAll('.tab');
-    let steps = document.querySelectorAll('.step');
     const stepCont = document.querySelector('#step-cont');
     
+    // ajoute les span.step pour chaque onglet
+    
+        for(let i = 0; i < tabs.length; i++) {
+            stepCont.innerHTML += "<span class='step'></span>";
+        }
+        const steps = document.querySelectorAll('.step');
+
     let currTab = 0;
     showTab(currTab);
-    console.log(tabs[currTab]);
-
-    // ajoute les span.step pour chaque onglet
-    for(let i = 0; i < tabs.length; i++) {
-        stepCont.innerHTML += "<span class='step'></span>";
-    }
     
     function showTab(n) {
-    
-        tabs[n].style.display = 'block';
         
-        for(let i = 0; i < steps.length; i++) {
-            steps[i].className = steps[i].className.replace(' active', '');
-            steps[i].className += ' active';
+        console.log(currTab + ' / ' + tabs.length);
+        tabs[n].className.includes('final-step') ? tabs[n].style.display = 'flex' : tabs[n].style.display = 'block';
+        
+        steps.forEach((step) => {
+            step.className = step.className.replace(" active", "");
+        });
+        
+        steps[n].className += " active";
+        
+        try {
+            if (n == 0) {
+                document.querySelector("#prevBtn").style.display = "none";
+            } 
+            else {
+                document.querySelector("#prevBtn").style.display = "inline";
+            }
         }
-        
-        if (n == 0) {
-            document.querySelector("#prevBtn").style.display = "none";
-        } 
-        else {
-            document.querySelector("#prevBtn").style.display = "inline";
+        catch(e) {
+            console.log(e);
         }
-        
-        if (n == (tabs.length - 1)) {
-            document.querySelector("#nextBtn").style.backgroundImage = "url(../Style/Icons/checkmark.png)";
-        } 
-        else {
-            document.querySelector("#nextBtn").style.backgroundImage = "url(../Style/Icons/right-arrow.png)";
-        }
-        
     }
     
     function validateForm() {
@@ -60,28 +59,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function nextPrev(n) {
         
-        if(n == 1 && !validateForm()) return false;
-    
-        tabs[currTab].style.display = 'block';
+        // if(n == 1 && !validateForm()) return false;
         
+        // tabs.forEach((tab) => {
+        //     tab != tabs[currTab] ? tab.style.display = 'block' : tab.style.display = 'none';
+        // })
+        
+        tabs[currTab].style.display = 'none';
         currTab += n;
     
         if(currTab >= tabs.length) {
-            document.getElementByClass('info-form').submit();
+            document.querySelector('.info-form').submit();
             return false;
         }
     
         showTab(currTab);
     }
 
-    // controle avec les boutons
-    document.querySelector('#prevBtn').addEventListener('click', nextPrev(-1));
-    document.querySelector('#nextBtn').addEventListener('click', nextPrev(1));
-    
-    // controle avec le clavier
-    document.addEventListener('keydown', (e) => {
-        if(e.key == 'ArrowLeft') nextPrev(-1);
-        if(e.key == 'ArrowRight') nextPrev(1);
-    });
+    try{
+        // controle avec les boutons
+        document.querySelector('#prevBtn').addEventListener('click', () => { nextPrev(-1) });
+        document.querySelector('#nextBtn').addEventListener('click', () => { nextPrev(1) });
+        
+        // controle avec le clavier
+        document.addEventListener('keydown', (e) => {
+            if(e.key == 'ArrowLeft') { nextPrev(-1); }
+            if(e.key == 'ArrowRight' || e.key == "Enter") { nextPrev(1); }
+        });
+
+        document.querySelector('#register').addEventListener('keydown', (e) => {
+            if(e.key == 'Enter') { e.preventDefault(); }
+        })
+    }
+    catch(e) {
+        console.log(e);
+    }
 
 });

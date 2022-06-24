@@ -4,7 +4,7 @@ include_once '../Imports/header.php';
 ?>
 
 
-<form class="info-form" action="" method="post">
+<form class="info-form" action="inscription.php" method="post">
     <legend>Inscription</legend>
 
     <div class="tab">
@@ -39,7 +39,7 @@ include_once '../Imports/header.php';
 
         <div class="field">
             <label for ="zip_code"><span class="required-symbol">-</span> Code postal</label>
-            <input id="zip_code" type="text" name="zip_code" placeholder="01234" required/>
+            <input id="zip_code" type="number" name="zip_code" placeholder="01234" required/>
         </div>
 
         <div class="field">
@@ -52,12 +52,12 @@ include_once '../Imports/header.php';
         <p class="sub-text">Veuillez entrer vos coordonnées (2/2)</p>
         <div class="field">
             <label for ="phone_number"><span class="required-symbol">-</span> N° de téléphone</label>
-            <input id="phone_number" type="text" name="phone_number" placeholder="01.23.45.67.89" required/>
+            <input id="phone_number" type="tel" name="phone_number" placeholder="01.23.45.67.89" required/>
         </div>
 
         <div class="field">
             <label for ="email"><span class="required-symbol">-</span> Email</label>
-            <input id="email" type="text" name="email" placeholder="email@mail.com" autocomplete="off" required>
+            <input id="email" type="email" name="email" placeholder="email@mail.com" autocomplete="off" required>
         </div>
 
         <div class="field">
@@ -71,9 +71,10 @@ include_once '../Imports/header.php';
         </div>
     </div>
 
-    <div class="tab">
+    <div class="tab final-step">
         <p class="sub-text">Dernière étape !</p>
-        <button id="register" type="submit" name="register">Créer un compte</button>
+        
+        <button id="register" type="submit" name="register" class="icon-btn">Créer un compte</button>
     </div>
 
     <p class="connexion-suggestion">Vous avez déjà un compte ? <br><a href="connexion.php">Connectez vous</a></p>

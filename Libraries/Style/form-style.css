@@ -40,9 +40,10 @@
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-.info-form input.invalid {
-    background-color: var(--primary-dark);
-}
+/* .info-form input.invalid {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: white
+} */
 
 .tab {
     display: none;
@@ -58,12 +59,12 @@
     opacity: 0.5;
 }
 
-.step.active {
-    opacity: 1;
+.step .active {
+    background-color: var(--primary-light);
 }
 
-.step.finish {
-    background-color: var(--primary-light);
+.step .finish {
+    background-color: var(--primary-lighter);
 }
 
 .connexion-suggestion {
@@ -72,4 +73,9 @@
 
 .required-symbol {
     color: var(--primary-dark);
+}
+
+.final-step {
+    flex-direction: column;
+    justify-content: center;
 }

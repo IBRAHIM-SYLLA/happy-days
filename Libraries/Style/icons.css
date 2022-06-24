@@ -28,3 +28,16 @@
     background-image: url(./Icons/right-arrow.png);
     float: right;
 }
+
+button#register {
+    background-image: url(./Icons/checkmark.png);
+    background-position-x: 10px;
+    background-size: 20%;
+    width: fit-content;
+    padding-right: 10px;
+    padding-left: 20%;
+    text-align: right;
+    margin: 15% auto;
+    background-color: var(--valid-color);
+    box-shadow: 0 0 15px var(--primary-dark);
+}
