@@ -44,8 +44,4 @@ button#register {
 
 #burger-btn {
     background-image: url(../Icons/menu.png);
-    position: absolute;
-    display: block;
-    bottom: 10px;
-    right: 10px;
 }

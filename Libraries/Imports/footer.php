@@ -1,6 +1,7 @@
 </main>
 
 <footer>
+<div id="bottom">
     <div class="topnav">
         <div id="myLinks">
             <a href="./Libraries/Views/presentation.php">Qui sommes-nous ?</a>
@@ -11,7 +12,7 @@
 
         <button class="icon-btn" id="burger-btn" onclick="showNav()"></button>
     </div>
-
+</div>
 </footer>
 
 </body>
