@@ -30,6 +30,11 @@ class User extends Model {
         return $fetch_email;
     }
 
+    public function update_user($email, $password, $adress, $zip_code, $city, $phone_number, $id){
+
+        $sql = $this->bdd->prepare("UPDATE `users` SET `email`= ?,`password`= ?,`adress`= ?,`zip_code`= ?,`city`= ?,`phone_number`= ? WHERE `id`= ?");
+        $sql->execute(array($email, $password, $adress, $zip_code, $city, $phone_number, $id));
+    }
 
 }
 

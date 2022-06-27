@@ -17,7 +17,7 @@ include_once '../Imports/header.php';
         
         <div class="field">
             <label for="password"><span class="required-symbol">-</span> Mot de passe</label>
-            <input type="text" name="password" id="" placeholder="Mot de passe" required>
+            <input type="password" name="password" id="" placeholder="Mot de passe" required>
         </div>
 
         <p class="connexion-suggestion">Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous</a></p>
