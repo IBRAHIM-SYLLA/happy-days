@@ -17,7 +17,7 @@ if (isset($_POST['connect'])){
                 if (password_verify($password, $verify[0]['password'])){
                     session_start();
                     $_SESSION['utilisateurs'] = $verify;
-                    header('Location: ../Views/index.php');
+                    header('Location: ../../index.php');
                 }
             }
             else{

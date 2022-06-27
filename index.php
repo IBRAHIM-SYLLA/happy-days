@@ -5,7 +5,7 @@ session_start();
 
 if (isset($_POST['deconnex'])){
     session_destroy();
-    header('Location: connexion.php');
+    header('Location: ./Libraries/Views/connexion.php');
 }
 ?>
 
