@@ -22,7 +22,7 @@ class User extends Model {
         $sql->execute(array($civility, $firstname, $lastname, $email, $password, $adress, $zip_code, $city, $phone_number));
     }
 
-    public function check_if_already_exists($email){
+    public function verify_and_connect($email){
 
         $sql = $this->bdd->prepare("SELECT * FROM users WHERE email = ?");
         $sql->execute(array($email));
@@ -30,9 +30,7 @@ class User extends Model {
         return $fetch_email;
     }
 
-    public function connect($email, $password){
 
-    }
 }
 
 

@@ -19,8 +19,11 @@ if (isset($_POST['deconnex'])){
     <?php var_dump($_SESSION) ?>
     <a href="inscription.php">inscription</a>
     <a href="connexion.php">connexion</a>
-    <form action="" method="post">
-        <button type="submit" name='deconnex'>deconnex</button>
-    </form>
+    <?php if (!empty($_SESSION)): ?>
+        <a href="profil.php">Mon profil</a>
+        <form action="" method="post">
+            <button type="submit" name='deconnex'>deconnex</button>
+        </form>
+        <?php endif; ?>
 </body>
 </html>
