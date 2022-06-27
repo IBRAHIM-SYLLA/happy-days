@@ -11,7 +11,7 @@ if (isset($_POST['connect'])){
 
         if (preg_match("/^[^@]+@[^@]+\.[a-z]{2,6}$/i", $email)){
             $user = new User();
-            $verify = $user->check_if_already_exists($email);
+            $verify = $user->verify_and_connect($email);
 
             if(count($verify) > 0){
                 if (password_verify($password, $verify[0]['password'])){
