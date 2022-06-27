@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <script src="./Libraries/Scripts/burger-menu-manager.js"></script>
+
     <?php
     // vérifie si l'user est sur mobile ou non
     function isMobile() {
@@ -23,11 +25,5 @@
     <a href="index.php"><img src="./Libraries/Style/Images/logo.png" class="logo"></a>
 </header>
 
-<div id="sub-header">
-    <a href="./Libraries/Views/presentation.php">Qui sommes-nous ?</a>
-    <a href="./Libraries/Views/nos-actions.php">Nos actions</a>
-    <a href="./Libraries/Views/adherer.php">Adhérer</a>
-    <a href="./Libraries/Views/contact.php">Contact</a>
-</div>
 
 <main>

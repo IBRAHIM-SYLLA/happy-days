@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <script src="../Scripts/burger-menu-manager.js"></script>
     <script src="../Scripts/form-tabs-manager.js"></script>
 
     <?php
@@ -21,7 +22,7 @@
 <body>
 
 <header>
-    <a href="index.php" style="visibility:hidden;"><img src="./Libraries/Style/Images/logo.png" id="logo"></a>
+    <a href="index.php"><img src="./Libraries/Style/Images/logo.png" id="logo"></a>
 </header>
 
 
