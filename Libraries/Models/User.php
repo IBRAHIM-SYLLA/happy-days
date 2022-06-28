@@ -26,7 +26,7 @@ class User extends Model {
 
         $sql = $this->bdd->prepare("SELECT * FROM users WHERE email = ?");
         $sql->execute(array($email));
-        $fetch_email = $sql->fetchAll();
+        $fetch_email = $sql->fetchAll(PDO::FETCH_ASSOC);
         return $fetch_email;
     }
 

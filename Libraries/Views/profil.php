@@ -35,6 +35,7 @@ var_dump($_SESSION['utilisateurs'][0]['id']);
         <input id="phone_number" type="text" name="phone_number" value="<?= $dataUser[0]['phone_number'] ?>" />
 
         <button id="update" type="submit" name="update">Mettre a jour</button>
+        <a href="../../index.php">Revenir</a>
     </form>
 </body>
 </html>

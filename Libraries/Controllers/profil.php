@@ -24,6 +24,7 @@ if (isset($_POST['update'])){
             if ($password == $password_conf){
                 $password = password_hash($password, PASSWORD_BCRYPT);
                 $user->update_user($email, $password, $adress, $zip_code, $city, $phone_number, $id);
+                header('Refresh: 0');
             }
             else{
                 echo "les mot de passe ne sont pas identique";
