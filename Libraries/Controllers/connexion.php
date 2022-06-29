@@ -1,6 +1,6 @@
 <?php
 require_once '../Models/User.php';
-require_once 'security.php';
+require_once 'functions.php';
 
 if (isset($_POST['connect'])){
 

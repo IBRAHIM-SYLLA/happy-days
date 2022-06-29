@@ -1,6 +1,6 @@
 <?php
 require_once '../Models/User.php';
-require_once 'security.php';
+require_once 'functions.php';
 $user = new User();
 
 if (isset($_POST['register'])){
@@ -26,6 +26,7 @@ if (isset($_POST['register'])){
                 $password = password_hash($password, PASSWORD_BCRYPT);
                 if(count($verify) == 0){
                     $user->register($civility, $firstname, $lastname, $email, $password, $adress, $zip_code, $city, $phone_number);
+                    sendMail($email, $lastname);
                 }
                 else{
                     echo 'user récurant';
