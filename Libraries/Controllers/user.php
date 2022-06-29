@@ -20,7 +20,7 @@ if (isset($_POST['register'])){
 
         if (preg_match("/^[^@]+@[^@]+\.[a-z]{2,6}$/i", $email) && preg_match('/^[0-9]{10}+$/', $phone_number)){
 
-            $verify = $user->check_if_already_exists($email);
+            $verify = $user->verify_and_connect($email);
                 // var_dump($verify);
             if ($password == $password_conf){
                 $password = password_hash($password, PASSWORD_BCRYPT);
