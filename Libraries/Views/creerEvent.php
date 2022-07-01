@@ -13,7 +13,7 @@ var_dump($_POST);
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <label for="name">Nom:</label>
         <input type="text" name="name" placeholder="Nom de l'event" id="">
 
@@ -42,7 +42,7 @@ var_dump($_POST);
         <input type="text" name="description" id="">
 
         <label for="image">Image:</label>
-        <input type="text" name="image" id="">
+        <input type="file" name="image" id="">
 
         <button type="submit" name="creer">Créer</button>
     </form>
