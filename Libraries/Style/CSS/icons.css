@@ -44,4 +44,6 @@ button#register {
 
 #burger-btn {
     background-image: url(../Icons/menu.png);
+    background-color: var(--primary);
+    transition: transform 1s;
 }
