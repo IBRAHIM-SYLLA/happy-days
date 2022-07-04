@@ -9,23 +9,25 @@ if (isset($_POST['deconnex'])){
 }
 
 var_dump($_SESSION) ?>
+
+<div class="presentation">
+    <h1>Titre</h1>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia veniam neque ad, reiciendis, consequatur nihil cumque sapiente dicta laboriosam eaque hic voluptatum accusantium? Ducimus ipsa harum ipsam nostrum accusantium deleniti.
+</div>
+
+<div class="slider" data-carousel>
+    <div id="img-cont" data-slides>
+    </div>
+    
+    <button id="prev" class="slider-btn"></button>
+    <button id="next" class="slider-btn"></button>
+</div>
+
+
 <a href="./Libraries/Views/inscription.php">inscription</a>
 <a href="./Libraries/Views/connexion.php">connexion</a>
 <form action="" method="post">
     <button type="submit" name='deconnex'>deconnexion</button>
 </form>
-
-<p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia veniam neque ad, reiciendis, consequatur nihil cumque sapiente dicta laboriosam eaque hic voluptatum accusantium? Ducimus ipsa harum ipsam nostrum accusantium deleniti.
-</p>
-
-<div class="slider">
-    <img src="" alt="" class="slider-img">
-    <img class="slider-img slider-img-front" src="" alt="">
-    <img src="" alt="" class="slider-img">
-    
-    <div id="prev" onclick="changeSlide(-1)"><</div>
-    <div id="next" onclick="changeSlide(1)">></div>
-</div>
 
 <?php require_once('./Libraries/Imports/footer-index.php') ?>

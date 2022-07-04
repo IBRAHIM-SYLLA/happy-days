@@ -1,5 +1,3 @@
-// code copié sans vergogne sur w3schools lol
-
 document.addEventListener('DOMContentLoaded', () => {
 
     const tabs = document.querySelectorAll('.tab');
