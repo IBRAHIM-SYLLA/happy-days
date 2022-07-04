@@ -1,5 +1,5 @@
 <?php
-include_once('./Libraries/Imports/header-index.php');
+require_once('./Libraries/Imports/header-index.php');
 
 session_start();
 
@@ -15,4 +15,17 @@ var_dump($_SESSION) ?>
     <button type="submit" name='deconnex'>deconnexion</button>
 </form>
 
-<?php include_once('./Libraries/Imports/footer-index.php') ?>
+<p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia veniam neque ad, reiciendis, consequatur nihil cumque sapiente dicta laboriosam eaque hic voluptatum accusantium? Ducimus ipsa harum ipsam nostrum accusantium deleniti.
+</p>
+
+<div class="slider">
+    <img src="" alt="" class="slider-img">
+    <img class="slider-img slider-img-front" src="" alt="">
+    <img src="" alt="" class="slider-img">
+    
+    <div id="prev" onclick="changeSlide(-1)"><</div>
+    <div id="next" onclick="changeSlide(1)">></div>
+</div>
+
+<?php require_once('./Libraries/Imports/footer-index.php') ?>

@@ -7,6 +7,7 @@
     <title>Document</title>
 
     <script src="./Libraries/Scripts/burger-menu-manager.js"></script>
+    <script src="./Libraries/Scripts/slider.js"></script>
 
     <?php
     // vérifie si l'user est sur mobile ou non
