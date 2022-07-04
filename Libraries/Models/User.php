@@ -18,7 +18,7 @@ class User extends Model {
 
     public function register($civility, $firstname, $lastname, $email, $password, $adress, $zip_code, $city, $phone_number) {
 
-        $sql = $this->bdd->prepare("INSERT INTO `users`(`civility`,`firstname`, `lastname`, `email`, `password`, `adress`, `zip_code`, `city`, `id_right`, `phone_number`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 1, ?)");
+        $sql = $this->bdd->prepare("INSERT INTO `users`(`civility`,`firstname`, `lastname`, `email`, `password`, `adress`, `zip_code`, `city`, `id_right`, `phone_number`, `member_state`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 1, ?, 1)");
         $sql->execute(array($civility, $firstname, $lastname, $email, $password, $adress, $zip_code, $city, $phone_number));
     }
 
@@ -34,6 +34,12 @@ class User extends Model {
 
         $sql = $this->bdd->prepare("UPDATE `users` SET `email`= ?,`password`= ?,`adress`= ?,`zip_code`= ?,`city`= ?,`phone_number`= ? WHERE `id`= ?");
         $sql->execute(array($email, $password, $adress, $zip_code, $city, $phone_number, $id));
+    }
+
+    public function delete_user($idUser){
+
+        $sql = $this->bdd->prepare("DELETE FROM `users` WHERE id = ?");
+        $sql->execute(array($idUser));
     }
 
 }

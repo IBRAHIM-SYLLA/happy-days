@@ -4,14 +4,7 @@ require_once '../Models/Event.php';
 require_once 'functions.php';
 
 $event = new Event();
-// if (!empty($_POST['date'])) {
-//     $date = $_POST['date'];
 
-//     $dateheure = explode(' ', $date);
-
-//     $jour = $dateheure['0'];
-//     $jourpost = date('d/m/Y', strtotime($jour));
-// }
 if (isset($_POST['creer'])){
 
     if (!empty($_POST['name']) && !empty($_POST['description']) &&
@@ -68,14 +61,25 @@ if (isset($_POST['creer'])){
             $bddfilename =  $newname.'.'.$extension;
 
             $event->registerEvent($name, $dateEvent, $description, $bddfilename);
+            sendMail("ibrah@ibra.com", "nouvelle évènement");
         }
     }
     else{
         echo 'champ vide';
     }
 
+    $fetchAllEvents = $event->selectAllEvents();
 
+    // if (!empty($_POST['date'])) {
+//     $date = $_POST['date'];
 
+//     $dateheure = explode(' ', $date);
+
+//     $jour = $dateheure['0'];
+//     $jourpost = date('d/m/Y', strtotime($jour));
+// }
+
+    
 
 
 
