@@ -11,12 +11,24 @@ require_once('../Controllers/admin.php');
     <title>admin</title>
 </head>
 <body>
-<?php foreach($allUsers as $allUser):?>
-        <?= $allUser['firstname']; ?><br>
-        <?= $allUser['lastname']; ?><br>
-        <?= $allUser['email']; ?><br>
-       <a href="lireUser?id=<?= $allUser['id']?>"><button type="submit">Lire</button></a>
-<?php endforeach; ?>
+    <table>
+        <thead>
+            <tr>ID</tr>
+            <tr>Prénom</tr>
+            <tr>Nom</tr>
+            <tr>Email</tr>
+        </thead>
+
+        <tbody>
+    <?php foreach($allUsers as $allUser):?>
+        <tr><?= $allUser['id']; ?></tr>
+        <tr><?= $allUser['firstname']; ?></tr>
+        <tr><?= $allUser['lastname']; ?></tr>
+        <tr><?= $allUser['email']; ?></tr>
+        <tr><a href="lireUser?id=<?= $allUser['id']?>"><button type="submit">Lire</button></a></tr>
+    <?php endforeach; ?>
+</tbody>
+</table>
 
 </body>
 </html>
