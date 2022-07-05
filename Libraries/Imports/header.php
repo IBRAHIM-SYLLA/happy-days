@@ -7,14 +7,19 @@
     <title>Document</title>
 
     <script src="../Scripts/burger-menu-manager.js"></script>
-    <script src="../Scripts/form-tabs-manager.js"></script>
+    
+    <?php
+    $hasForm = false;
+    if($hasForm): ?>
+        <script src="../Scripts/form-tabs-manager.js"></script>
+    <?php endif; ?>
 
     <?php
     // vérifie si l'user est sur mobile ou non
     function isMobile() {
         return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
     }
-    isMobile() ? $cssDIR = "./Libraries/Style/CSS/Mobile/" : $cssDIR = "./Libraries/Style/CSS/Computer/";
+    isMobile() ? $cssDIR = "../Style/CSS/Mobile/" : $cssDIR = "../Style/CSS/Desktop/";
     ?>
 
     <link rel="stylesheet" href="<?= $cssDIR ?>style.css">
@@ -22,7 +27,7 @@
 <body>
 
 <header>
-    <a href="index.php"><img src="./Libraries/Style/Images/logo.png" id="logo"></a>
+    <a href="index.php"><img src="../Style/Images/logo.png" id="logo"></a>
 </header>
 
 

@@ -1,6 +1,7 @@
 <?php 
 require_once '../Controllers/user.php'; 
-include_once '../Imports/header.php';
+require_once '../Imports/header.php';
+$hasForm = true;
 ?>
 
 

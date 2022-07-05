@@ -1,12 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // const prevBtn = document.querySelector('#prev');
-    // const nextBtn = document.querySelector('#next');
-    
-    // prevBtn.addEventListener('click', changeSlide(-1));
-    // nextBtn.addEventListener('click', changeSlide(1));
-    
-    // function changeSlide(sens) {
         let root;
         
         if(window.location.href.indexOf("index.php") > -1) {
@@ -21,21 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
             root +'Style/Images/Slider/2.png', 
             root +'Style/Images/Slider/3.png'
         );
-    
-    //     let nb = 0;
-    //     nb += sens;
-        
-    //     if(nb < 0) {
-    //         nb = slide.length - 1;
-    //     }
-    //     if(nb > slide.length - 1) {
-    //         nb = 0;
-    //     }
-    
-    //     document.querySelector('.left').src  = slide[nb-1];
-    //     document.querySelector('.front').src = slide[nb];
-    //     document.querySelector('.right').src = slide[nb+1];
-    // }
 
 
     const imgCont = document.querySelector('#img-cont');

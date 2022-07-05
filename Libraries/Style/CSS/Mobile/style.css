@@ -1,5 +1,6 @@
 @import url(form-style.css);
 @import url(slider.css);
+@import url(table.css);
 @import url(../icons.css);
 @import url(../palette.css);
 
@@ -13,10 +14,10 @@
     padding: 0;
 }
 
-body {
-    min-width: 100vw;
-    height: 1200px;
+body, main {
+    max-width: 100%;
     min-height: 100vh;
+    max-height: 100%;
     background-color: var(--bg-color);
 }
 
@@ -98,7 +99,7 @@ footer {
     font-size: 11px;
 }
 
-.logo {
+header img {
     width: 40%;
     margin: auto;
     display: block;
@@ -110,4 +111,10 @@ footer {
     padding: 20px;
     margin: 20px 0;
     font-family: "Prompt";
+}
+
+.heading {
+    text-align: center;
+    margin: 10px;
+    font-family: Prompt;
 }

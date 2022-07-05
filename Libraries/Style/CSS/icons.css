@@ -27,7 +27,7 @@
 }
 
 button#register {
-    background-image: url(./Icons/checkmark.png);
+    background-image: url(../Icons/checkmark.png);
     background-position-x: 10px;
     background-size: 20%;
     width: fit-content;

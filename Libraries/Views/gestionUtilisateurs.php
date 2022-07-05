@@ -1,34 +1,34 @@
 <?php
 require_once('../Controllers/admin.php');
+require_once('../Imports/header.php');
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin</title>
-</head>
-<body>
+<div class="heading">
+    <h1><?= sizeof($allUsers) ?></h1>
+    <h3>utilisateurs sont enregistrés dans la base de données.</h3>
+</div>
+
     <table>
         <thead>
-            <tr>ID</tr>
-            <tr>Prénom</tr>
-            <tr>Nom</tr>
-            <tr>Email</tr>
+            <tr>
+                <td>ID</td>
+                <td>Prénom</td>
+                <td>Nom</td>
+                <td>Email</td>
+            </tr>
         </thead>
 
         <tbody>
     <?php foreach($allUsers as $allUser):?>
-        <tr><?= $allUser['id']; ?></tr>
-        <tr><?= $allUser['firstname']; ?></tr>
-        <tr><?= $allUser['lastname']; ?></tr>
-        <tr><?= $allUser['email']; ?></tr>
-        <tr><a href="lireUser?id=<?= $allUser['id']?>"><button type="submit">Lire</button></a></tr>
+        <tr>
+            <td class="id-row"><?= $allUser['id']; ?></td>
+            <td class="fn-row"><?= $allUser['firstname']; ?></td>
+            <td class="ln-row"><?= $allUser['lastname']; ?></td>
+            <td class="mail-row"><?= $allUser['email']; ?></td>
+            <td class="link-row"><a href="lireUser?id=<?= $allUser['id']?>"><button type="submit">Lire</button></a></td>
+        </tr>
     <?php endforeach; ?>
-</tbody>
-</table>
+        </tbody>
+    </table>
 
-</body>
-</html>
+<?php require_once('../Imports/footer.php'); ?>
