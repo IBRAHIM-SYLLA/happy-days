@@ -15,7 +15,9 @@ require_once('../Controllers/admin.php');
         <?= $allUser['firstname']; ?><br>
         <?= $allUser['lastname']; ?><br>
         <?= $allUser['email']; ?><br>
-       <a href="lireUser?id=<?= $allUser['id']?>"><button type="submit">Lire</button></a>
+       <a href="lireUser.php?id=<?= $allUser['id']?>"><button type="submit">Lire</button></a>
+       <a href="modifierUser.php?id=<?= $allUser['id']?>"><button type="submit">Modfier</button></a>
+       <a href="supprimerUser.php?id=<?= $allUser['id']?>"><button type="submit">Supprimer</button></a>
 <?php endforeach; ?>
 
 </body>

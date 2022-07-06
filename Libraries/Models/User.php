@@ -46,16 +46,22 @@ class User extends Model {
         return $fetch;
     }
 
-    public function update_user($email, $password, $adress, $zip_code, $city, $phone_number, $id){
+    public function update_user($email, $password, $adress, $zip_code, $city, $phone_number, $idUser){
 
         $sql = $this->bdd->prepare("UPDATE `users` SET `email`= ?,`password`= ?,`adress`= ?,`zip_code`= ?,`city`= ?,`phone_number`= ? WHERE `id`= ?");
-        $sql->execute(array($email, $password, $adress, $zip_code, $city, $phone_number, $id));
+        $sql->execute(array($email, $password, $adress, $zip_code, $city, $phone_number, $idUser));
     }
 
     public function delete_user($idUser){
 
         $sql = $this->bdd->prepare("DELETE FROM `users` WHERE id = ?");
         $sql->execute(array($idUser));
+    }
+
+    public function update_user_admin($email, $adress, $zip_code, $city, $id_right ,$phone_number, $idUser){
+
+        $sql = $this->bdd->prepare("UPDATE `users` SET `email`= ?,`adress`= ?,`zip_code`= ?,`city`= ?,`id_right`= ?,`phone_number`= ? WHERE `id`= ?");
+        $sql->execute(array($email, $adress, $zip_code, $city, $id_right, $phone_number, $idUser));
     }
 
 }
