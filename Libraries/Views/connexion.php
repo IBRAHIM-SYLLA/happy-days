@@ -1,7 +1,8 @@
 <?php
 session_start();
 require_once '../Controllers/connexion.php';
-include_once '../Imports/header.php';
+require_once '../Imports/header.php';
+$hasForm = true;
 ?>
 
 <form class="info-form" action="" method="post">

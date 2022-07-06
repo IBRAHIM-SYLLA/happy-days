@@ -1,0 +1,120 @@
+@import url(form-style.css);
+@import url(slider.css);
+@import url(table.css);
+@import url(../icons.css);
+@import url(../palette.css);
+
+@font-face {
+    font-family: Prompt;
+    src: url(../../Fonts/Prompt/Prompt-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, main {
+    max-width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+    background-color: var(--bg-color);
+}
+
+header {
+    background-color: var(--primary);
+    border-bottom-left-radius: 70%;
+    border-bottom-right-radius: 70%;
+    /* padding: 0; */
+    width: 100vw;
+    position: sticky;
+    top: 0;
+}
+
+footer {
+    /* background-color: var(--primary); */
+    border-top-left-radius: 70%;
+    border-top-right-radius: 70%;
+    width: 100vw;
+    height: fit-content;
+    position: fixed;
+    bottom: 0;
+}
+
+.topnav {
+    /* overflow: hidden; */
+    /* background-color: #333; */
+    position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+#myLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 0;
+    margin: 10px 10px;
+    background-color: var(--primary);
+    border-radius: 100px;
+}
+
+#myLinks a {
+    width: fit-content;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+#myLinks img {
+    width: 35%;
+    padding: 0;
+    margin: 0;
+    filter: drop-shadow(0 0 5px white);
+}
+
+/* Style navigation menu links */
+.topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+/* Style the hamburger menu */
+.topnav #burger-btn {
+    margin: 3px auto;
+    display: flex;
+    justify-self: center;
+}
+
+.sub-text {
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.info-small {
+    font-size: 11px;
+}
+
+header img {
+    width: 40%;
+    margin: auto;
+    display: block;
+    filter: drop-shadow(0 0 5px white);
+}
+
+.presentation {
+    background-color: var(--primary-light);
+    padding: 20px;
+    margin: 20px 0;
+    font-family: "Prompt";
+}
+
+.heading {
+    text-align: center;
+    margin: 10px;
+    font-family: Prompt;
+}
