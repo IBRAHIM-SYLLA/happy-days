@@ -9,15 +9,12 @@
     <script src="/happy-days/Libraries/Scripts/burger-menu-manager.js"></script>
     <script src="/happy-days/Libraries/Scripts/form-tabs-manager.js"></script>
 
-    <?php
-    // vérifie si l'user est sur mobile ou non
-    function isMobile() {
-        return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
-    }
-    isMobile() ? $cssDIR = "/happy-days/Libraries/Style/CSS/Mobile/" : $cssDIR = "/happy-days/Libraries/Style/CSS/Desktop/";
-    ?>
 
-    <link rel="stylesheet" href="<?= $cssDIR ?>style.css">
+    <link rel="stylesheet" href="../Style/CSS/header.css">
+    <link rel="stylesheet" href="../Style/CSS/footer.css">
+    <link rel="stylesheet" href="../Style/CSS/index.css">
+    <link rel="stylesheet" href="../Style/CSS/inscription.css">
+    <link rel="stylesheet" href="../Style/CSS/connexion.css">
 </head>
 <body>
 

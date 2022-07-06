@@ -19,6 +19,8 @@
     ?>
 
     <link rel="stylesheet" href="<?= $cssDIR ?>style.css">
+    <link rel="stylesheet" href="<?= $cssDIR ?>index.css">
+    <link rel="stylesheet" href="<?= $cssDIR ?>inscription.css">
 </head>
 <body>
 

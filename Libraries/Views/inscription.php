@@ -1,9 +1,10 @@
 <?php 
 require_once '../Controllers/user.php'; 
-include_once '../Imports/header.php';
+require_once '../Imports/header.php';
 ?>
 
 
+<section id="inscription">
 <form class="info-form" action="inscription.php" method="post">
     <legend>Inscription</legend>
 
@@ -88,5 +89,6 @@ include_once '../Imports/header.php';
     <div style="text-align:center; margin-top:40px;" id="step-cont"></div>
 
 </form>
+</section>
 
 <?php include_once '../Imports/footer.php'; ?>

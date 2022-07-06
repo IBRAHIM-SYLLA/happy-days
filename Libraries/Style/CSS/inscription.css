@@ -1,7 +1,11 @@
-@import url(../palette.css);
-@import url(../fonts.css);
+@import url(./palette.css);
 
-.info-form {
+@font-face {
+    font-family: 'Prompt';
+    src: url(../Fonts/Prompt/Prompt-Regular.ttf) format('ttf');
+}
+
+#inscription .info-form {
     margin: 5%;
     padding: 5%;
     background-color: var(--primary-light);
@@ -10,28 +14,28 @@
     box-shadow: 0 10px 0px var(--primary);
     border-radius: 10px;
     /* font-family: "Noto Sans"; */
-    font-family: Prompt;
+    font-family: 'Prompt';
     letter-spacing: 1px;
 }
 
-.info-form legend {
+#inscription .info-form legend {
     font-weight: bold;
     font-size: 1.5em;
     text-align: center;
 }
 
-.info-form .field {
+#inscription .info-form .field {
     display: flex;
     flex-direction: column;
     margin: 5% 0;
 }
 
-.info-form .field label {
+#inscription .info-form .field label {
     font-weight: bold;
 }
 
-.info-form .field input,
-.info-form .field select {
+#inscription .info-form .field input,
+#inscription .info-form .field select {
     width: 90%;
     margin-left: 5%;
     padding: 5px;
@@ -40,16 +44,11 @@
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-/* .info-form input.invalid {
-    background-color: rgba(255, 0, 0, 0.2);
-    color: white
-} */
-
-.tab {
+#inscription .tab {
     display: none;
 }
 
-.step {
+#inscription .step {
     height: 15px;
     width: 15px;
     margin: 0 2px;
@@ -59,23 +58,44 @@
     opacity: 0.5;
 }
 
-.step .active {
+#inscription .step.active {
     background-color: var(--primary-light);
 }
 
-.step .finish {
+#inscription .step.finish {
     background-color: var(--primary-lighter);
 }
 
-.connexion-suggestion {
+#inscription .connexion-suggestion {
     text-align: center;
 }
 
-.required-symbol {
+#inscription .required-symbol {
     color: var(--primary-dark);
 }
 
-.final-step {
+#inscription .final-step {
     flex-direction: column;
     justify-content: center;
+}
+
+#inscription .sub-text {
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+#inscription .info-small {
+    font-size: 11px;
+}
+
+#inscription .icon-btn#nextBtn {
+    background-image: url(../Icons/right-arrow.png);
+    background-position: center;
+    background-size: 50%;
+}
+
+#inscription .icon-btn#nextBtn {
+    background-image: url(../Icons/left-arrow.png);
+    background-position: center;
+    background-size: 50%;
 }

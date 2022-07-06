@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 100vw;
+    height: 1200px;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+header {
+    background-color: var(--primary);
+    border-bottom-left-radius: 70%;
+    border-bottom-right-radius: 70%;
+    /* padding: 0; */
+    width: 100vw;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    width: 40%;
+    margin: auto;
+    display: block;
+    filter: drop-shadow(0 0 5px white);
+}
