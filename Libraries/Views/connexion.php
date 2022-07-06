@@ -1,7 +1,9 @@
 <?php
 session_start();
-require_once '../Controllers/connexion.php';
-require_once '../Imports/header.php';
+require_once '/happy-days/Libraries/Controllers/connexion.php';
+require_once '/happy-days/Libraries/Imports/header.php';
+
+$hasForm = true;
 ?>
 
 <form class="info-form" action="" method="post">
@@ -35,5 +37,5 @@ require_once '../Imports/header.php';
 
 </form>
 
-<?php include_once '../Imports/footer.php';
+<?php include_once '/happy-days/Libraries/Imports/footer.php';
 ?>

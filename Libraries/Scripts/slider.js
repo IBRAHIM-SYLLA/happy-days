@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // function changeSlide(sens) {
         let root;
+        let url = window.location.href;
         
-        if(window.location.href.indexOf("index.php") > -1) {
+        if(url.includes('index.php') || url.endsWith('happy-days/')) {
             root = "./Libraries/";
         }
         else {
