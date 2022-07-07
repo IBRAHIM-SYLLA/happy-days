@@ -25,7 +25,7 @@ require_once '../includes/SMTP.php';
         // on gère les exceptions donc try catch
         try{
             // Configuration
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER; // Je veux des info de debug
+            // $mail->SMTPDebug = SMTP::DEBUG_SERVER; // Je veux des info de debug
 
             // On configure le SMTP (Simple Mail Transfer Protocol)
             $mail->isSMTP();

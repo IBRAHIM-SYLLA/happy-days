@@ -7,7 +7,7 @@ require_once('../Controllers/admin.php');
     <h1><?= sizeof($allUsers) ?></h1>
     <h3>utilisateurs sont enregistrés dans la base de données.</h3>
 </div>
-
+    <a href="creerUser.php"><button>Creer un utilisateur</button></a>
     <table>
         <thead>
             <tr>

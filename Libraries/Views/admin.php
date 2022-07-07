@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="gestionUtilisateurs.php">Users</a>
+    <a href="gestionUser.php">Users</a>
     <a href="gestionEvent.php">Event</a>
 </body>
 </html>
