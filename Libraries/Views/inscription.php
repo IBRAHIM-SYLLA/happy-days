@@ -80,7 +80,7 @@ require_once '../Imports/header.php';
 
     <p class="connexion-suggestion">Vous avez déjà un compte ? <br><a href="connexion.php">Connectez vous</a></p>
     
-    <div style="overflow: auto;">
+    <div id="btn-cont" style="overflow: auto;">
         <button type="button" id="prevBtn" class="icon-btn"></button>
 
         <button type="button" id="nextBtn" class="icon-btn"></button>

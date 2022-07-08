@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script src="/happy-days/Libraries/Scripts/burger-menu-manager.js"></script>
-    <script src="/happy-days/Libraries/Scripts/form-tabs-manager.js"></script>
+    <script src="../Scripts/burger-menu-manager.js"></script>
+    <script src="../Scripts/form-tabs-manager.js"></script>
 
     <link rel="stylesheet" href="../Style/CSS/index.css">
     <link rel="stylesheet" href="../Style/CSS/inscription.css">
@@ -20,7 +20,7 @@
 <body>
 
 <header>
-    <a href="index.php"><img src="/happy-days/Libraries/Style/Images/logo.png" id="logo"></a>
+    <a href="index.php"><img src="../Style/Images/logo.png" class="logo"></a>
 </header>
 
 

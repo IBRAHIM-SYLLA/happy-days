@@ -23,16 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
         
         steps[n].className += " active";
         
-        try {
+        if(document.querySelector('#prevBtn') != null) {
             if (n == 0) {
-                document.querySelector("#prevBtn").style.display = "none";
+                document.querySelector("#prevBtn").style.visibility = "hidden";
             } 
             else {
-                document.querySelector("#prevBtn").style.display = "inline";
+                document.querySelector("#prevBtn").style.visibility = "visible";
             }
-        }
-        catch(e) {
-            console.log(e);
         }
     }
     
@@ -49,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showTab(currTab);
     }
 
-    try{
+    if(document.querySelector('#prevBtn') != null) {
         // controle avec les boutons
         document.querySelector('#prevBtn').addEventListener('click', () => { nextPrev(-1) });
         document.querySelector('#nextBtn').addEventListener('click', () => { nextPrev(1) });
@@ -64,8 +61,4 @@ document.addEventListener('DOMContentLoaded', () => {
             if(e.key == 'Enter') { e.preventDefault(); }
         })
     }
-    catch(e) {
-        console.log(e);
-    }
-
 });

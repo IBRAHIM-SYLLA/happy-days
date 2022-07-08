@@ -1,11 +1,12 @@
 <?php
 session_start();
-require_once '/happy-days/Libraries/Controllers/connexion.php';
-require_once '/happy-days/Libraries/Imports/header.php';
+require_once '../Controllers/connexion.php';
+require_once '../Imports/header.php';
 
 $hasForm = true;
 ?>
 
+<section id="connexion">
 <form class="info-form" action="" method="post">
     <legend>Connexion</legend>
     
@@ -24,8 +25,9 @@ $hasForm = true;
 
         <p class="connexion-suggestion">Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous</a></p>
         
+        <div id="btn-cont">
             <button id="register" type="submit" name="register" class="icon-btn">Se connecter</button>
-        
+        </div>
     
         <!-- <div style="overflow:auto;">
             <button type="submit" id="privBtn" name="connect" class="icon-btn"></button>
@@ -36,6 +38,7 @@ $hasForm = true;
     </div>
 
 </form>
+</section>
 
-<?php include_once '/happy-days/Libraries/Imports/footer.php';
+<?php require_once '../Imports/footer.php';
 ?>

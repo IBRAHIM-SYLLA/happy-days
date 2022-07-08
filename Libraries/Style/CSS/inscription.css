@@ -1,9 +1,6 @@
 @import url(./palette.css);
-
-@font-face {
-    font-family: 'Prompt';
-    src: url(../Fonts/Prompt/Prompt-Regular.ttf) format('ttf');
-}
+/* import Prompt font */
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 
 #inscription .info-form {
     margin: 5%;
@@ -12,9 +9,8 @@
     border: 3px solid var(--primary);
     border-top-width: 2px;
     box-shadow: 0 10px 0px var(--primary);
-    border-radius: 10px;
     /* font-family: "Noto Sans"; */
-    font-family: 'Prompt';
+    font-family: Prompt;
     letter-spacing: 1px;
 }
 
@@ -39,8 +35,8 @@
     width: 90%;
     margin-left: 5%;
     padding: 5px;
-    border: 0;
-    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid var(--primary-dark);
     background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -59,11 +55,11 @@
 }
 
 #inscription .step.active {
-    background-color: var(--primary-light);
+    background-color: white;
 }
 
 #inscription .step.finish {
-    background-color: var(--primary-lighter);
+    background-color: var(--valid-color);
 }
 
 #inscription .connexion-suggestion {
@@ -88,14 +84,44 @@
     font-size: 11px;
 }
 
-#inscription .icon-btn#nextBtn {
-    background-image: url(../Icons/right-arrow.png);
-    background-position: center;
-    background-size: 50%;
+#inscription #btn-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
 }
 
-#inscription .icon-btn#nextBtn {
-    background-image: url(../Icons/left-arrow.png);
+#inscription .icon-btn {
     background-position: center;
     background-size: 50%;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    border-width: 0;
+    background-color: var(--primary-lighter);
+}
+
+#inscription #prevBtn {
+    background-image: url(../Icons/left-arrow.png);
+    float: right;
+}
+
+#inscription #nextBtn {
+    background-image: url(../Icons/right-arrow.png);
+    float: left;
+}
+
+#inscription .icon-btn[name="register"] {
+    display: block;
+    margin: 10% auto;
+    background-image: url(../Icons/checkmark.png);
+    background-position: 10%;
+    background-size: 20%;
+    font-size: 16px;
+    width: 70%;
+    background-color: var(--valid-color);
+    text-align: right;
+    padding-right: 10px;
 }
