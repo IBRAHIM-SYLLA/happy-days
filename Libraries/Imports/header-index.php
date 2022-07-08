@@ -9,7 +9,6 @@
     <script src="./Libraries/Scripts/burger-menu-manager.js"></script>
     <script src="./Libraries/Scripts/slider.js"></script>
 
-
     <link rel="stylesheet" href="./Libraries/Style/CSS/index.css">
     <link rel="stylesheet" href="./Libraries/Style/CSS/inscription.css">
     <link rel="stylesheet" href="./Libraries/Style/CSS/header.css">
@@ -21,7 +20,7 @@
 <body>
 
 <header>
-    <a href="index.php"><img src="./Libraries/Style/Images/logo.png" class="logo"></a>
+    <a href="../../index.php"><img src="./Libraries/Style/Images/logo.png" class="logo"></a>
 </header>
 
 

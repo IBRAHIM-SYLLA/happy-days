@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // le nombre d'onglets / d'étapes
     const tabs = document.querySelectorAll('.tab');
     const stepCont = document.querySelector('#step-cont');
     
     // ajoute les span.step pour chaque onglet
-    
         for(let i = 0; i < tabs.length; i++) {
             stepCont.innerHTML += "<span class='step'></span>";
         }
@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function showTab(n) {
         
-        console.log(currTab + ' / ' + tabs.length);
         tabs[n].className.includes('final-step') ? tabs[n].style.display = 'flex' : tabs[n].style.display = 'block';
         
         steps.forEach((step) => {
@@ -37,31 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    function validateForm() {
-    
-        let x, i;
-        let valid = true;
-    
-        x = document.querySelectorAll('input');
-    
-        for(i = 0; i < x.length; i++) {
-            if(x[i].value == "") {
-                x[i].className += " invalid";
-                valid = false;
-            }
-        }
-    
-        if(valid) document.querySelectorAll('.step')[currTab].className += " finish";
-        return valid;
-    }
-
     function nextPrev(n) {
-        
-        // if(n == 1 && !validateForm()) return false;
-        
-        // tabs.forEach((tab) => {
-        //     tab != tabs[currTab] ? tab.style.display = 'block' : tab.style.display = 'none';
-        // })
         
         tabs[currTab].style.display = 'none';
         currTab += n;

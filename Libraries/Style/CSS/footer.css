@@ -1,67 +1,51 @@
 footer {
-    transform: translateY(50px);
-    /* display: block; */
+    transform: translateY(54px);
     background-color: var(--primary);
     width: 100vw;
     height: fit-content;
     position: fixed;
     bottom: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
     transition: transform 1s;
+    z-index: 2;
 }
 
-.topnav {
-    /* overflow: hidden; */
-    /* background-color: #333; */
-    position: relative;
-}
-
-/* Hide the links inside the navigation menu (except for logo/home) */
 #myLinks {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
     justify-content: space-between;
-    text-align: center;
-    background-color: var(--primary);
-    border-radius: 100px;
+    align-items: center;
+    width: 100vw;
 }
 
 #myLinks a {
-    width: fit-content;
-}
-
-#myLinks img {
-    width: 40%;
-    height: auto;
-    filter: drop-shadow(0 0 5px white);
+    padding: 10px;
 }
 
 #left-links, #right-links {
+    justify-content: space-between;
+    width: 35vw;
     display: flex;
-    outline: 1px solid green;
+    flex-direction: row;
 }
 
-/* Style navigation menu links */
-.topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-}
-
-/* Style the hamburger menu */
-.topnav #burger-btn {
-    margin: 3px auto;
-    display: block;
+#left-links img, #right-links img {
+    width: 30px;
 }
 
 #burger-btn {
-    transform: translateY(-50px);
+    position: static;
+    transform: translateY(-54px);
+    margin: auto;
+    display: block;
     background-color: var(--primary);
-    width: 40px;
-    height: 40px;
-    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
     border-width: 0;
     background-image: url(../Icons/up-arrow.png);
     background-repeat: no-repeat;
