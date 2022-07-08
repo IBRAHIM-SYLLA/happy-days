@@ -55,13 +55,13 @@
 }
 
 .slider-btn#prev {
-    background-image: url(../../Icons/left-arrow.png);
+    background-image: url(../Icons/left-arrow.png);
     transform: translate(-20%, -50%);
     left: 0;
 }
 
 .slider-btn#next {
-    background-image: url(../../Icons/right-arrow.png);
+    background-image: url(../Icons/right-arrow.png);
     transform: translate(20%, -50%);
     right: 0;
 }

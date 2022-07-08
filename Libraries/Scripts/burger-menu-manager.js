@@ -1,13 +1,10 @@
 function showNav() {
-    let x = document.getElementById('myLinks');
-    
-    if(x.style.display === 'flex') {
-        x.style.display = 'none';
-    }
-    else {
-        x.style.display = 'flex';
-    }
+    let burgerbtn = document.querySelector('#burger-btn');
+    burgerbtn.style.transform == '' ? burgerbtn.style.transform = 'rotate(-180deg)' : burgerbtn.style.transform = '';
 
-    let y = document.querySelector('#burger-btn');
-    y.style.transform == '' ? y.style.transform = 'rotateZ(360deg)' : y.style.transform = '';
+    let footer = document.querySelector('footer');
+    footer.style.transform == '' ? footer.style.transform = 'translateY(0px)' : footer.style.transform = '';
+
+    let myLinks = document.querySelector('#myLinks');
+    myLinks.style.transform == '' ? myLinks.style.transform = 'translateY(0px)' : myLinks.style.transform = '';
 }

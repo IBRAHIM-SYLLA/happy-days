@@ -9,7 +9,8 @@
     <script src="/happy-days/Libraries/Scripts/burger-menu-manager.js"></script>
     <script src="/happy-days/Libraries/Scripts/form-tabs-manager.js"></script>
 
-
+    <link rel="stylesheet" href="../Style/CSS/index.css">
+    <link rel="stylesheet" href="../Style/CSS/inscription.css">
     <link rel="stylesheet" href="../Style/CSS/header.css">
     <link rel="stylesheet" href="../Style/CSS/footer.css">
     <link rel="stylesheet" href="../Style/CSS/index.css">
