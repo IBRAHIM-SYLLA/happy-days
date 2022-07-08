@@ -3,6 +3,9 @@ require_once '../Models/User.php';
 require_once '../Models/Event.php';
 require_once '../Controllers/functions.php';
 
+// on instencie les class
+
+// ---------------------------- User ------------------------//
 $user = new User();
 
 $allUsers = $user->selectAllUsers();
@@ -88,4 +91,35 @@ if(isset($_POST['registerAdmin'])){
                 $_POST['password_conf'], $_POST['adress'], $_POST['zip_code'], $_POST['city'], $_POST['id_right'],
                 $_POST['phone_number']);
 }
+
+// ---------------------------- Event ------------------------------------ //
+
+$event = new Event();
+
+$allEvents = $event->selectAllEvents();
+
+function update_event($name, $date, $heuredebut, $description){
+
+    if(!empty($_POST['name']) && !empty($_POST['date']) && !empty($_POST['heuredebut']) && !empty($_POST['description'])){
+
+        $idEvent = $_GET['id'];
+        $name = security($_POST['name']);
+        $description = security($_POST['description']);
+        $date = security($_POST['date']);
+        $heuredebut = security($_POST['heuredebut']);
+        $dateEvent = $date.' '.$heuredebut;
+
+        $event = new Event();
+        $event->updateEvent($name, $dateEvent, $description, $idEvent);
+        header('Refresh: 0');
+    }
+    else{
+        echo 'champs vide';
+    }
+}
+
+if (isset($_POST['update_event'])){
+    update_event($_POST['name'], $_POST['date'], $_POST['heuredebut'], $_POST['description']);
+}
+
 ?>

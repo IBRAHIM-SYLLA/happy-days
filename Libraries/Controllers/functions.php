@@ -60,5 +60,5 @@ require_once '../includes/SMTP.php';
             echo "Message non envoyé. Erreur; {$mail->ErrorInfo}";
         }
     }
-    
+
 ?>

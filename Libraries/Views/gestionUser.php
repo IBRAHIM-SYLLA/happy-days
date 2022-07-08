@@ -27,7 +27,7 @@ require_once('../Controllers/admin.php');
             <td class="mail-row"><?= $allUser['email']; ?></td>
             <td class="link-row"><a href="lireUser?id=<?= $allUser['id']?>"><button type="submit">Lire</button></a></td>
             <td class="link-row"><a href="modifierUser.php?id=<?= $allUser['id']?>"><button type="submit">Modfier</button></a></td>
-            <td class="link-row"><a href="supprimerUser.php?id=<?= $allUser['id']?>"><button type="submit">Supprimer</button></a></td>
+            <td class="link-row"><a href="deleteUser.php?id=<?= $allUser['id']?>"><button type="submit">Supprimer</button></a></td>
         </tr>
     <?php endforeach; ?>
         </tbody>

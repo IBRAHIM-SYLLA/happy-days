@@ -14,7 +14,7 @@ if (isset($_POST['creer'])){
         if(!empty($_FILES["image"]) && $_FILES["image"]["error"] == 0){
 
             // on a reçu l'image
-            var_dump($_FILES);
+            // var_dump($_FILES);
 
             $name = security($_POST['name']);
             $description = security($_POST['description']);
@@ -79,7 +79,7 @@ if (isset($_POST['creer'])){
 //     $jourpost = date('d/m/Y', strtotime($jour));
 // }
 
-    
+
 
 
 
