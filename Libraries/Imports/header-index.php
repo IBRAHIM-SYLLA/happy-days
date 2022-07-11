@@ -9,6 +9,7 @@
     <script src="./Libraries/Scripts/burger-menu-manager.js"></script>
     <script src="./Libraries/Scripts/slider.js"></script>
 
+<<<<<<< HEAD
     <?php
     // vérifie si l'user est sur mobile ou non
     function isMobile() {
@@ -19,6 +20,15 @@
     ?>
 
     <link rel="stylesheet" href="<?= $cssDIR ?>style.css">
+=======
+    <link rel="stylesheet" href="./Libraries/Style/CSS/index.css">
+    <link rel="stylesheet" href="./Libraries/Style/CSS/inscription.css">
+    <link rel="stylesheet" href="./Libraries/Style/CSS/header.css">
+    <link rel="stylesheet" href="./Libraries/Style/CSS/footer.css">
+    <link rel="stylesheet" href="./Libraries/Style/CSS/index.css">
+    <link rel="stylesheet" href="./Libraries/Style/CSS/inscription.css">
+    <link rel="stylesheet" href="./Libraries/Style/CSS/connexion.css">
+>>>>>>> front
 </head>
 <body>
 

@@ -14,20 +14,18 @@
         <script src="../Scripts/form-tabs-manager.js"></script>
     <?php endif; ?>
 
-    <?php
-    // vérifie si l'user est sur mobile ou non
-    function isMobile() {
-        return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
-    }
-    isMobile() ? $cssDIR = "../Style/CSS/Mobile/" : $cssDIR = "../Style/CSS/Desktop/";
-    ?>
-
-    <link rel="stylesheet" href="<?= $cssDIR ?>style.css">
+    <link rel="stylesheet" href="../Style/CSS/index.css">
+    <link rel="stylesheet" href="../Style/CSS/inscription.css">
+    <link rel="stylesheet" href="../Style/CSS/header.css">
+    <link rel="stylesheet" href="../Style/CSS/footer.css">
+    <link rel="stylesheet" href="../Style/CSS/index.css">
+    <link rel="stylesheet" href="../Style/CSS/inscription.css">
+    <link rel="stylesheet" href="../Style/CSS/connexion.css">
 </head>
 <body>
 
 <header>
-    <a href="index.php"><img src="../Style/Images/logo.png" id="logo"></a>
+    <a href="../../index.php"><img src="../Style/Images/logo.png" class="logo"></a>
 </header>
 
 

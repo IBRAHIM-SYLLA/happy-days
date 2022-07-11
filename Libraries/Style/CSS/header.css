@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 100vw;
+    background-color: var(--bg-color);
+}
+
+header {
+    background-color: var(--primary);
+    border-bottom-left-radius: 70%;
+    border-bottom-right-radius: 70%;
+    /* padding: 0; */
+    width: 100vw;
+    position: sticky;
+    top: 0;
+}
+
+header .logo {
+    width: 50vw;
+    margin: auto;
+    display: block;
+    filter: drop-shadow(0 0 5px white);
+}

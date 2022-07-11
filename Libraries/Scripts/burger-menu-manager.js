@@ -1,13 +1,16 @@
+/**
+ * Fonction qui est executée à chaque fois qu'on presse le bouton du footer
+ */
 function showNav() {
-    let x = document.getElementById('myLinks');
-    
-    if(x.style.display === 'flex') {
-        x.style.display = 'none';
-    }
-    else {
-        x.style.display = 'flex';
-    }
+    // le bouton tourne : la flèche pointe vers l'autre sens
+    let burgerbtn = document.querySelector('#burger-btn');
+    burgerbtn.style.transform == '' ? 
+        burgerbtn.style.transform += ' rotate(-180deg)' : 
+        burgerbtn.style.transform = '';
 
-    let y = document.querySelector('#burger-btn');
-    y.style.transform == '' ? y.style.transform = 'rotateZ(360deg)' : y.style.transform = '';
+    // le footer monte ou descends
+    let footer = document.querySelector('footer');
+    footer.style.transform == '' ? 
+        footer.style.transform += ' translateY(0px)' : 
+        footer.style.transform = '';
 }

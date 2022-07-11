@@ -1,10 +1,10 @@
 <?php 
 require_once '../Controllers/user.php'; 
 require_once '../Imports/header.php';
-$hasForm = true;
 ?>
 
 
+<section id="inscription">
 <form class="info-form" action="inscription.php" method="post">
     <legend>Inscription</legend>
 
@@ -80,7 +80,7 @@ $hasForm = true;
 
     <p class="connexion-suggestion">Vous avez déjà un compte ? <br><a href="connexion.php">Connectez vous</a></p>
     
-    <div style="overflow: auto;">
+    <div id="btn-cont" style="overflow: auto;">
         <button type="button" id="prevBtn" class="icon-btn"></button>
 
         <button type="button" id="nextBtn" class="icon-btn"></button>
@@ -89,5 +89,6 @@ $hasForm = true;
     <div style="text-align:center; margin-top:40px;" id="step-cont"></div>
 
 </form>
+</section>
 
 <?php include_once '../Imports/footer.php'; ?>
