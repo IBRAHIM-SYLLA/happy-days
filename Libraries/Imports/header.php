@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../Style/CSS/index.css">
     <link rel="stylesheet" href="../Style/CSS/inscription.css">
     <link rel="stylesheet" href="../Style/CSS/connexion.css">
+    <link rel="stylesheet" href="../Style/CSS/gestionUtilisateurs.css">
 </head>
 <body>
 
