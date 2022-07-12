@@ -27,7 +27,7 @@
 <body>
 
 <header>
-    <a href="index.php"><img src="../Style/Images/logo.png" class="logo"></a>
+    <a href="../../index.php"><img src="../Style/Images/logo.png" class="logo"></a>
 </header>
 
 
