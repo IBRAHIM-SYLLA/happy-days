@@ -26,7 +26,11 @@ require_once('../Imports/header.php');
                 <td class="fn-row"><?= $allUser['firstname']; ?></td>
                 <td class="ln-row"><?= $allUser['lastname']; ?></td>
                 <td class="mail-row"><?= $allUser['email']; ?></td>
-                <td class="link-row"><a href="lireUser?id=<?= $allUser['id']?>"><button type="submit">Lire</button></a></td>
+                <td class="link-row">
+                    <a href="lireUser?id=<?= $allUser['id']?>">Lire</a>
+                    <a href="">Modifier</a>
+                    <a href="">Supprimer</a>
+                </td>
             </tr>
         <?php endforeach; ?>
         </tbody>
