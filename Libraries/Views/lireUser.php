@@ -11,7 +11,7 @@ require_once '../Imports/header.php';
 ?>
 
 <section id="lireUser">
-    <a href="./gestionUtilisateurs.php">Retour</a>
+    <a href="./gestionUser.php">Retour</a>
 
     <div id="user-card">
     <h2 id="title">

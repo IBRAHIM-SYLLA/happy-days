@@ -9,20 +9,21 @@
 }
 
 #gestionUser .new-user {
-    background-image: url(../Icons/left-arrow.png);
+    background-image: url(../Icons/add-user.png);
     background-repeat: no-repeat;
-    background-size: 15%;
+    background-size: 10%;
     background-position: left 10px center;
     text-align: right;
-    font-size: 22px;
+    /* font-size: 22px; */
     font-family: Prompt;
     padding: 10px;
+    width: fit-content;
     padding-left: 40px;
-    margin-left: 20px;
+    display: block;
+    margin: 20px;
     text-decoration: none;
     color: black;
     border-radius: 5px;
-    border-width: 0;
     background-color: var(--primary-light);
 }
 
