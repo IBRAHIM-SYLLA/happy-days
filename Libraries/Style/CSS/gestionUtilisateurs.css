@@ -8,6 +8,24 @@
     margin: 20px auto;
 }
 
+#gestionUser .new-user {
+    background-image: url(../Icons/left-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: left 10px center;
+    text-align: right;
+    font-size: 22px;
+    font-family: Prompt;
+    padding: 10px;
+    padding-left: 40px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    border-width: 0;
+    background-color: var(--primary-light);
+}
+
 #gestionUser table {
     max-width: 100vw;
     margin-bottom: 60px;

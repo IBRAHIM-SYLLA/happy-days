@@ -1,6 +1,6 @@
 <?php
 require_once('../Controllers/admin.php');
-// require_once('../Imports/header.php');
+require_once('../Imports/header.php');
 ?>
 
 <section id="gestionUser">
@@ -8,7 +8,7 @@ require_once('../Controllers/admin.php');
     <h1><?= sizeof($allUsers) ?></h1>
     <h3>utilisateurs sont enregistrés dans la base de données.</h3>
 </div>
-    <a href="creerUser.php"><button>Creer un utilisateur</button></a>
+    <a href="creerUser.php" class="new-user">Créer un utilisateur</a>
     <table>
         <thead>
             <tr>
@@ -28,8 +28,8 @@ require_once('../Controllers/admin.php');
             <td class="mail-row"><?= $allUser['email']; ?></td>
             <td class="link-row">
                 <a href="lireUser?id=<?= $allUser['id']?>">Lire</a>
-                <a href="modifierUser.php?id=<?= $allUser['id']?>"></a>
-                <a href="deleteUser.php?id=<?= $allUser['id']?>"></a>
+                <a href="modifierUser.php?id=<?= $allUser['id']?>">Modifier</a>
+                <a href="deleteUser.php?id=<?= $allUser['id']?>">Supprimer</a>
             </td>
         </tr>
     <?php endforeach; ?>
