@@ -7,12 +7,7 @@
     <title>Document</title>
 
     <script src="../Scripts/burger-menu-manager.js"></script>
-    
-    <?php
-    $hasForm = false;
-    if($hasForm): ?>
-        <script src="../Scripts/form-tabs-manager.js"></script>
-    <?php endif; ?>
+    <script src="../Scripts/form-tabs-manager.js"></script>
 
     <link rel="stylesheet" href="../Style/CSS/index.css">
     <link rel="stylesheet" href="../Style/CSS/inscription.css">
