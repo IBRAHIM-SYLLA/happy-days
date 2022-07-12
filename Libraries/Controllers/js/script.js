@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function (){
                     document.getElementById('errors').innerText = result.error.message
                 }
                 else{
-                    document.location.href = "Views/test_stripe.php";
+                    document.location.href = "confirmation.php";
                 }
             })
         })

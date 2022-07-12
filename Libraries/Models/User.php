@@ -70,6 +70,11 @@ class User extends Model {
         $sql->execute(array($civility, $firstname, $lastname, $email, $password, $adress, $zip_code, $city, $id_right, $phone_number));
     }
 
+    public function update_member_state($idUser){
+        $sql = $this->bdd->prepare("UPDATE `users` SET `member_state`= 1 WHERE `id`= ?");
+        $sql->execute(array($idUser));
+    }
+
 }
 
 

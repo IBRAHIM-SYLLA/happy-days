@@ -1,22 +1,5 @@
 <?php
-if(isset($_POST['prix']) && !empty($_POST['prix'])){
-    require_once '../vendor/autoload.php';
-    $prix = (float) $_POST['prix'];
-
-    // On intencie Stripe avec la clés secrète
-    \Stripe\Stripe::setApiKey('sk_test_51LKIPhE1hkhM3fmbcfm3xBcP7AvpMSoXN3rxcHZHIooZXLSkagLLYwbQxtpb9IvgpEhTeoQfizdqBq7Wy1lx2cu100HC3KqCEk');
-
-    $intent = \Stripe\PaymentIntent::create([
-
-        'amount' => $prix*100,  //prix en centimes
-        'currency' => 'eur'
-    ]);
-
-}
-else{
-    header('Location: test_stripe.php');
-}
-
+require_once '../Controllers/paiement.php';
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +8,7 @@ else{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/script.js"></script>
+    <script src="../Controllers/js/script.js"></script>
     <title>Document</title>
 </head>
 <body>

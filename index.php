@@ -29,9 +29,10 @@ var_dump($_SESSION) ?>
 <a href="./Libraries/Views/testmail.php">Mail</a>
 <?php if(!empty($_SESSION)): ?>
 <a href="./Libraries/Views/profil.php">Mon Profil</a>
-    <?php endif; ?>
+<a href="Libraries/Views/adherer.php">Adhérer</a>
 <form action="" method="post">
     <button type="submit" name='deconnex'>deconnexion</button>
 </form>
+<?php endif; ?>
 
 <?php require_once('./Libraries/Imports/footer-index.php') ?>
