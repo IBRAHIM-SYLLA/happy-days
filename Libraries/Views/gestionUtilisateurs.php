@@ -21,7 +21,7 @@ require_once('../Imports/header.php');
 
         <tbody>
         <?php foreach($allUsers as $allUser):?>
-            <tr>
+            <tr id="<?= $allUser['id']; ?>">
                 <td class="id-row"><?= $allUser['id']; ?></td>
                 <td class="fn-row"><?= $allUser['firstname']; ?></td>
                 <td class="ln-row"><?= $allUser['lastname']; ?></td>

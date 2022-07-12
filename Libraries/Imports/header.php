@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../Style/CSS/inscription.css">
     <link rel="stylesheet" href="../Style/CSS/connexion.css">
     <link rel="stylesheet" href="../Style/CSS/gestionUtilisateurs.css">
+    <link rel="stylesheet" href="../Style/CSS/lireUser.css">
 </head>
 <body>
 

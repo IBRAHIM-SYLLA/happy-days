@@ -1,0 +1,58 @@
+@import url(./palette.css);
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+body {
+    max-width: 100%;
+}
+
+#lireUser {
+    margin-top: 20px;
+}
+
+#user-card {
+    margin: 5%;
+    padding: 5%;
+    background-color: var(--primary-light);
+    border: 3px solid var(--primary);
+    border-top-width: 2px;
+    box-shadow: 0 10px 0px var(--primary);
+    /* font-family: "Noto Sans"; */
+    font-family: Prompt;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#user-card h3, #user-card p {
+    vertical-align: baseline;
+}
+
+#user-card #title {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--primary);
+}
+
+#user-card .icon {
+    width: 20px;
+    height: auto;
+    align-self: center;
+}
+
+#lireUser a {
+    background-image: url(../Icons/left-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: left 10px center;
+    text-align: right;
+    font-size: 22px;
+    font-family: Prompt;
+    padding: 10px;
+    padding-left: 40px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    border-width: 0;
+    background-color: var(--primary-light);
+}
