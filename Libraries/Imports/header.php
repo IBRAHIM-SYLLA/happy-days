@@ -25,7 +25,15 @@
 <body>
 
 <header>
+<<<<<<< HEAD
     <a href="../../index.php"><img src="../Style/Images/logo.png" class="logo"></a>
+=======
+<<<<<<< HEAD
+    <a href="index.php"><img src="../Style/Images/logo.png" id="logo"></a>
+=======
+    <a href="index.php"><img src="../Style/Images/logo.png" class="logo"></a>
+>>>>>>> dev
+>>>>>>> 61146379fa58a55795235826a9d3f5cba6d0e480
 </header>
 
 

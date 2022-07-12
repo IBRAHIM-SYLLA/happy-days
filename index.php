@@ -25,13 +25,13 @@ if(isset($_POST['deconnex'])) {
 
 <a href="./Libraries/Views/inscription.php">inscription</a>
 <a href="./Libraries/Views/connexion.php">connexion</a>
-<a href="./Libraries/Views/testmail.php">Mail</a>
 <?php if(!empty($_SESSION)): ?>
 <a href="./Libraries/Views/profil.php">Mon Profil</a>
-    <?php endif; ?>
+<a href="Libraries/Views/adherer.php">Adhérer</a>
 <form action="" method="post">
     <button type="submit" name='deconnex'>deconnexion</button>
 </form>
+<?php endif; ?>
 
 <?php 
 var_dump($_SESSION);

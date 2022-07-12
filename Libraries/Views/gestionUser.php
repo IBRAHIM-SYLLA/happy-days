@@ -1,13 +1,13 @@
 <?php
 require_once('../Controllers/admin.php');
-require_once('../Imports/header.php');
+// require_once('../Imports/header.php');
 ?>
 
 <div class="heading">
     <h1><?= sizeof($allUsers) ?></h1>
     <h3>utilisateurs sont enregistrés dans la base de données.</h3>
 </div>
-
+    <a href="creerUser.php"><button>Creer un utilisateur</button></a>
     <table>
         <thead>
             <tr>
@@ -26,6 +26,8 @@ require_once('../Imports/header.php');
             <td class="ln-row"><?= $allUser['lastname']; ?></td>
             <td class="mail-row"><?= $allUser['email']; ?></td>
             <td class="link-row"><a href="lireUser?id=<?= $allUser['id']?>"><button type="submit">Lire</button></a></td>
+            <td class="link-row"><a href="modifierUser.php?id=<?= $allUser['id']?>"><button type="submit">Modfier</button></a></td>
+            <td class="link-row"><a href="deleteUser.php?id=<?= $allUser['id']?>"><button type="submit">Supprimer</button></a></td>
         </tr>
     <?php endforeach; ?>
         </tbody>
