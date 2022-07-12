@@ -25,10 +25,18 @@ class Event extends Model{
         return $fetchAllEvents;
     }
 
-    public function updateEvent($name, $dateEvent, $description, $image){
+    public function selectEvent($idEvent){
 
-        $sql = $this->bdd->prepare("UPDATE `event` SET `name`= ?,`date`= ?,`description`= ?,`image`= ? WHERE `id` = ?");
-        $sql->execute(array($name, $dateEvent, $description, $image));
+        $sql = $this->bdd->prepare("SELECT * FROM `event` WHERE `id` = ?");
+        $sql->execute(array($idEvent));
+        $fetchEvent = $sql->fetchAll();
+        return $fetchEvent;
+    }
+
+    public function updateEvent($name, $dateEvent, $description, $idEvent){
+
+        $sql = $this->bdd->prepare("UPDATE `event` SET `name`= ?,`date`= ?,`description`= ? WHERE `id` = ?");
+        $sql->execute(array($name, $dateEvent, $description, $idEvent));
     }
 
     public function deleteEvent($idEvent){
