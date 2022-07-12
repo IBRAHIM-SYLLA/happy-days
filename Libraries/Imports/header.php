@@ -14,6 +14,7 @@
         <script src="../Scripts/form-tabs-manager.js"></script>
     <?php endif; ?>
 
+<<<<<<< HEAD
     <?php
     // vérifie si l'user est sur mobile ou non
     function isMobile() {
@@ -23,11 +24,24 @@
     ?>
 
     <link rel="stylesheet" href="<?= $cssDIR ?>style.css">
+=======
+    <link rel="stylesheet" href="../Style/CSS/index.css">
+    <link rel="stylesheet" href="../Style/CSS/inscription.css">
+    <link rel="stylesheet" href="../Style/CSS/header.css">
+    <link rel="stylesheet" href="../Style/CSS/footer.css">
+    <link rel="stylesheet" href="../Style/CSS/index.css">
+    <link rel="stylesheet" href="../Style/CSS/inscription.css">
+    <link rel="stylesheet" href="../Style/CSS/connexion.css">
+>>>>>>> dev
 </head>
 <body>
 
 <header>
+<<<<<<< HEAD
     <a href="index.php"><img src="../Style/Images/logo.png" id="logo"></a>
+=======
+    <a href="index.php"><img src="../Style/Images/logo.png" class="logo"></a>
+>>>>>>> dev
 </header>
 
 

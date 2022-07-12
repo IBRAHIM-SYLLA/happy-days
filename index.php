@@ -3,12 +3,11 @@ require_once('./Libraries/Imports/header-index.php');
 
 session_start();
 
-if (isset($_POST['deconnex'])){
+if(isset($_POST['deconnex'])) {
     session_destroy();
     header('Location: ./Libraries/Views/connexion.php');
 }
-
-var_dump($_SESSION) ?>
+?>
 
 <div class="presentation">
     <h1>Titre</h1>
@@ -34,4 +33,7 @@ var_dump($_SESSION) ?>
 </form>
 <?php endif; ?>
 
-<?php require_once('./Libraries/Imports/footer-index.php') ?>
+<?php 
+var_dump($_SESSION);
+require_once('./Libraries/Imports/footer-index.php') 
+?>

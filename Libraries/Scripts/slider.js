@@ -1,8 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> dev
         let root;
+        let url = window.location.href;
         
-        if(window.location.href.indexOf("index.php") > -1) {
+        // nous sommes sur la page d'index
+        if(url.includes('index.php') || url.endsWith('happy-days/')) {
             root = "./Libraries/";
         }
         else {
@@ -14,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
             root +'Style/Images/Slider/2.png', 
             root +'Style/Images/Slider/3.png'
         );
+<<<<<<< HEAD
+=======
+    
+>>>>>>> dev
 
 
     const imgCont = document.querySelector('#img-cont');
@@ -35,9 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const btns = document.querySelectorAll('.slider-btn');
 
+    // pour chaque bouton cliqué
     btns.forEach((btn) => {
 
         btn.addEventListener('click', () => {
+            // pour savoir si on doit incrémenter ou décrémenter l'index de l'image
             const offset = btn.id === "next" ? 1 : -1;
             const slides = btn
                 .closest('[data-carousel]')
@@ -46,7 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let newIndex = [...slides.children].indexOf(activeSlide) + offset;
 
+            // amène l'index à la fin de l'array d'images si l'index est inférieur à 0
             if(newIndex < 0) newIndex = slides.children.length - 1;
+            // amène l'index au début de l'array d'images si l'index à dépassé la taille de l'array
             if(newIndex >= slides.children.length) newIndex = 0;
 
             slides.children[newIndex].dataset.active = true;

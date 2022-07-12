@@ -5,6 +5,7 @@ require_once '../Imports/header.php';
 $hasForm = true;
 ?>
 
+<section id="connexion">
 <form class="info-form" action="" method="post">
     <legend>Connexion</legend>
     
@@ -23,8 +24,9 @@ $hasForm = true;
 
         <p class="connexion-suggestion">Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous</a></p>
         
-            <button id="register" type="submit" name="connect" class="icon-btn">Se connecter</button>
-        
+        <div id="btn-cont">
+            <button id="register" type="submit" name="register" class="icon-btn">Se connecter</button>
+        </div>
     
         <!-- <div style="overflow:auto;">
             <button type="submit" id="privBtn" name="connect" class="icon-btn"></button>
@@ -35,6 +37,7 @@ $hasForm = true;
     </div>
 
 </form>
+</section>
 
-<?php include_once '../Imports/footer.php';
+<?php require_once '../Imports/footer.php';
 ?>
