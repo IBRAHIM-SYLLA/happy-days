@@ -1,9 +1,11 @@
 <?php
 session_start();
 require_once '../Models/User.php';
+require_once '../Controllers/functions.php';
 
 $user = new User();
 $idUser = $_SESSION['utilisateurs'][0]['id'];
+$emailUser = $_SESSION['utilisateurs'][0]['email'];
 if(!empty($_SESSION)){
     require_once '../vendor/autoload.php';
     $prix = (float) 10;
@@ -14,9 +16,10 @@ if(!empty($_SESSION)){
     $intent = \Stripe\PaymentIntent::create([
 
         'amount' => $prix * 100,  //prix en centimes
-        'currency' => 'eur'
+        'currency' => 'eur'       // on indique la monnaie utilisé
     ]);
     $user->update_member_state($idUser);
+    sendMail($emailUser, $_SESSION['utilisateurs'][0]['lastname']);
 }
 else{
     header('Location: adherer.php');

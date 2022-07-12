@@ -77,5 +77,4 @@ class User extends Model {
 
 }
 
-
 ?>
