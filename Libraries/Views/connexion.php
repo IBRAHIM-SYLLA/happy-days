@@ -2,7 +2,6 @@
 session_start();
 require_once '../Controllers/connexion.php';
 require_once '../Imports/header.php';
-$hasForm = true;
 ?>
 
 <section id="connexion">
@@ -14,12 +13,12 @@ $hasForm = true;
 
         <div class="field">
             <label for="email"><span class="required-symbol">-</span> Email</label>
-            <input type="text" name="email" id="" placeholder="email@mail.com" required>
+            <input type="text" name="email" placeholder="email@mail.com" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
         </div>      
         
         <div class="field">
             <label for="password"><span class="required-symbol">-</span> Mot de passe</label>
-            <input type="password" name="password" id="" placeholder="Mot de passe" required>
+            <input type="password" name="password" placeholder="Mot de passe" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" required>
         </div>
 
         <p class="connexion-suggestion">Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous</a></p>
@@ -37,7 +36,9 @@ $hasForm = true;
     </div>
 
 </form>
+
 </section>
+<div class="error-cont"></div>
 
 <?php require_once '../Imports/footer.php';
 ?>

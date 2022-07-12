@@ -58,12 +58,12 @@ require_once '../Imports/header.php';
 
         <div class="field">
             <label for ="email"><span class="required-symbol">-</span> Email</label>
-            <input id="email" type="email" name="email" placeholder="email@mail.com" autocomplete="off" required>
+            <input id="email" type="email" name="email" placeholder="email@mail.com" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" autocomplete="off" required>
         </div>
 
         <div class="field">
             <label for ="password"><span class="required-symbol">-</span> Mot de passe</label>
-            <input id="password" type="password" name="password" placeholder="Mot de passe" required/>
+            <input id="password" type="password" name="password" placeholder="Mot de passe" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" required/>
         </div>
 
         <div class="field">
@@ -89,6 +89,8 @@ require_once '../Imports/header.php';
     <div style="text-align:center; margin-top:40px;" id="step-cont"></div>
 
 </form>
+
 </section>
+<div class="error-cont"></div>
 
 <?php include_once '../Imports/footer.php'; ?>

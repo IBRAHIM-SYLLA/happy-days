@@ -8,6 +8,7 @@
 
     <script src="../Scripts/burger-menu-manager.js"></script>
     <script src="../Scripts/form-tabs-manager.js"></script>
+    <script src="../Scripts/check-input-validity.js"></script>
 
     <link rel="stylesheet" href="../Style/CSS/index.css">
     <link rel="stylesheet" href="../Style/CSS/inscription.css">
