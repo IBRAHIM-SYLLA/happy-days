@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../Style/CSS/connexion.css">
     <link rel="stylesheet" href="../Style/CSS/gestionUtilisateurs.css">
     <link rel="stylesheet" href="../Style/CSS/lireUser.css">
+    <link rel="stylesheet" href="../Style/CSS/adherer.css">
 </head>
 <body>
 

@@ -9,7 +9,7 @@ const passwordChecks = {
 const passwordInput = document.querySelector('input[name="password"]');
 const passwordCheckP = document.querySelector('#password-check');
 
-const colors = [ "red", "goldenrod", "green" ];
+const colors = [ "red", "gold", "green" ];
 let currColor;
 
 if(passwordInput != null && passwordCheckP != null) {
