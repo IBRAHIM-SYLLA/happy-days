@@ -14,8 +14,8 @@
 
     --bg-color: #eeeeee;
 
-    --valid-color: rgb(69, 243, 69);
-    --alert-color: yellow;
-    --danger-color: red;
+    --valid-color: rgb(68, 223, 68);
+    --alert-color: rgb(255, 255, 56);
+    --danger-color: rgb(255, 74, 74);
     --info-color: rgb(86, 86, 255);
 }

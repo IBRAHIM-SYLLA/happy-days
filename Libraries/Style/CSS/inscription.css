@@ -125,3 +125,9 @@
     text-align: right;
     padding-right: 10px;
 }
+
+#inscription #password-check {
+    font-size: 16px;
+    font-style: italic;
+    filter: drop-shadow(0 0 1px rgba(0,0,0,0.5));
+}

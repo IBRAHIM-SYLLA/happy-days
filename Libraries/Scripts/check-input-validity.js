@@ -1,39 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-const passwordCheck = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/g
-const mailCheck = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
+const passwordChecks = {
+    weak: /^(?=.*[a-z])/g,
+    medium: /^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/g,
+    strong: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/g
+};
 
 const passwordInput = document.querySelector('input[name="password"]');
-const mailInput = document.querySelector('input[name="email"]');
-const errorCont = document.querySelector('.error-cont');
+const passwordCheckP = document.querySelector('#password-check');
 
-if(passwordInput != null && mailInput != null && errorCont != null) {
+const colors = [ "red", "goldenrod", "green" ];
+let currColor;
+
+if(passwordInput != null && passwordCheckP != null) {
 
     passwordInput.addEventListener('input', () => {
-        if(passwordInput.textContent.match(passwordCheck) != null) {
-            errorCont.textContent += 
-            `
-            Erreur !
-            Votre mot de passe doit contenir :
-            - au moins 8 caractères,
-            - une lettre minuscule et majuscule,
-            - un chiffre,
-            - un caractère spécial.
-            `
-        } else errorCont.textContent = '';
-    });
+        // console.log(passwordInput.value);
 
-    mailInput.addEventListener('input', () => {
-        if(mailInput.textContent.match(mailCheck) != null) {
-            errorCont.textContent += 
-            `
-            Erreur !
-            Email invalide.
-            `
-        } else errorCont.textContent = '';
+        if(passwordChecks.weak.test(passwordInput.value)) {
+            currColor = colors[0];
+            passwordCheckP.textContent = 'Fiabilité du mot de passe: Faible';
+        }
+        if(passwordChecks.medium.test(passwordInput.value)) {
+            currColor = colors[1];
+            passwordCheckP.textContent = 'Fiabilité du mot de passe: Moyenne';
+        }
+        if(passwordChecks.strong.test(passwordInput.value)) {
+            currColor = colors[2];
+            passwordCheckP.textContent = 'Fiabilité du mot de passe: Forte';
+        }
 
-        console.log('change')
-    });
+        passwordCheckP.style.color = currColor;
+        passwordInput.style.borderBottomColor = currColor;
+    })
 }
 
 })
