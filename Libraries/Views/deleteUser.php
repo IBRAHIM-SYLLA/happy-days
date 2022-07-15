@@ -4,11 +4,11 @@ require_once '../Controllers/admin.php';
 $idUser = $_GET['id'];
 
 $user = new User();
-$dataUser = $user->selectUser($idUser);
+$dataUser = $user->selectAllWhereId($idUser);
 // var_dump($dataUser);
 
 if (isset($_POST['delete'])){
-    $user->delete_user($idUser);
+    $user->delete($idUser);
     header('Location: gestionUtilisateurs.php');
 }
 var_dump($idUser);
@@ -27,6 +27,6 @@ var_dump($idUser);
    <form action="" method="post">
         <button type="submit" name="delete">Supprimer</button>
    </form>
-   <a href="gestionUtilisateurs.php"><button>retour</button></a>
+   <a href="gestionUser.php"><button>retour</button></a>
 </body>
 </html>
