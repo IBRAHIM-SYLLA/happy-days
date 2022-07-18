@@ -5,9 +5,7 @@ require_once '../Models/Event.php';
 $idEvent = $_GET['id'];
 
 $dataEvent = $event->selectAllWhereId($idEvent);
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,10 +15,9 @@ $dataEvent = $event->selectAllWhereId($idEvent);
     <title>Document</title>
 </head>
 <body>
-   <img src="../uploads/<?= $dataEvent[0]['image']; ?>" alt=""><br>
-    <?= $dataEvent[0]['name']; ?><br>
-    <?= $dataEvent[0]['date']; ?><br>
+<img src="../uploads/<?=$dataEvent[0]['image']; ?>" alt="">
+    <?= $dataEvent[0]['name']; ?>
     <?= $dataEvent[0]['description']; ?>
-    <a href="gestionEvent.php"><button>retour</button></a>
+    <?= $dataEvent[0]['date']; ?>
 </body>
 </html>

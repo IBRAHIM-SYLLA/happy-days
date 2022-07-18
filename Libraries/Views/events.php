@@ -1,7 +1,7 @@
 <?php
-require_once '../Models/Event.php';
+// require_once '../Models/Event.php';
 require_once '../Controllers/event.php';
-$fetchAllEvents = $event->selectAllEvents();
+// $fetchAllEvents = $event->selectAllEvents();
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +17,8 @@ $fetchAllEvents = $event->selectAllEvents();
 
             <img src="../uploads/<?=$fetchAllEvent['image']; ?>" alt="">
             <?= $fetchAllEvent['name']; ?>
-            <?= $fetchAllEvent['description']; ?>
             <?= $fetchAllEvent['date']; ?>
-
+            <a href="event.php?id=<?=$fetchAllEvent['id']; ?>"><button>Voir l'event</button></a>
         <?php endforeach; ?>
 </body>
 </html>

@@ -4,7 +4,7 @@ require_once '../Models/User.php';
 $idUser = $_GET['id'];
 
 $user = new User();
-$dataUser = $user->selectUser($idUser);
+$dataUser = $user->selectAllWhereId($idUser);
 var_dump($dataUser);
 ?>
 
@@ -27,5 +27,6 @@ var_dump($dataUser);
     <?= $dataUser[0]['city'] ?><br>
     <?= $dataUser[0]['id_right'] ?><br>
     <?= $dataUser[0]['phone_number'] ?>
+    <a href="gestionUser.php"><button>retour</button></a>
 </body>
 </html>

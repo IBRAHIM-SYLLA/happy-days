@@ -4,10 +4,10 @@ require_once '../Controllers/admin.php';
 $idEvent = $_GET['id'];
 
 $event = new Event();
-$dataEvent = $event->selectEvent($idEvent);
+$dataEvent = $event->selectAllWhereId($idEvent);
 
 if (isset($_POST['delete'])){
-    $event->deleteEvent($idEvent);
+    $event->delete($idEvent);
     header('Location: gestionEvent.php');
 }
 ?>

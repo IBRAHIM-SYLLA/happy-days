@@ -4,7 +4,7 @@ require_once '../Models/Event.php';
 
 $idEvent = $_GET['id'];
 
-$dataEvent = $event->selectEvent($idEvent);
+$dataEvent = $event->selectAllWhereId($idEvent);
 
 
 ?>
@@ -48,5 +48,6 @@ $dataEvent = $event->selectEvent($idEvent);
 
         <button type="submit" name="update_event">Modifier</button>
     </form>
+    <a href="gestionEvent.php"><button>retour</button></a>
 </body>
 </html>
