@@ -23,5 +23,4 @@
     <a href="index.php"><img src="./Libraries/Style/Images/logo.png" class="logo"></a>
 </header>
 
-
 <main>

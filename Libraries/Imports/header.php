@@ -7,12 +7,8 @@
     <title>Document</title>
 
     <script src="../Scripts/burger-menu-manager.js"></script>
-    
-    <?php
-    $hasForm = false;
-    if($hasForm): ?>
-        <script src="../Scripts/form-tabs-manager.js"></script>
-    <?php endif; ?>
+    <script src="../Scripts/form-tabs-manager.js"></script>
+    <script src="../Scripts/check-input-validity.js"></script>
 
     <link rel="stylesheet" href="../Style/CSS/index.css">
     <link rel="stylesheet" href="../Style/CSS/inscription.css">
@@ -21,19 +17,14 @@
     <link rel="stylesheet" href="../Style/CSS/index.css">
     <link rel="stylesheet" href="../Style/CSS/inscription.css">
     <link rel="stylesheet" href="../Style/CSS/connexion.css">
+    <link rel="stylesheet" href="../Style/CSS/gestionUtilisateurs.css">
+    <link rel="stylesheet" href="../Style/CSS/lireUser.css">
+    <link rel="stylesheet" href="../Style/CSS/adherer.css">
 </head>
 <body>
 
 <header>
-<<<<<<< HEAD
     <a href="../../index.php"><img src="../Style/Images/logo.png" class="logo"></a>
-=======
-<<<<<<< HEAD
-    <a href="index.php"><img src="../Style/Images/logo.png" id="logo"></a>
-=======
-    <a href="index.php"><img src="../Style/Images/logo.png" class="logo"></a>
->>>>>>> dev
->>>>>>> 61146379fa58a55795235826a9d3f5cba6d0e480
 </header>
 
 
