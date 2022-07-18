@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="../Style/CSS/gestionUtilisateurs.css">
     <link rel="stylesheet" href="../Style/CSS/lireUser.css">
     <link rel="stylesheet" href="../Style/CSS/adherer.css">
+    <link rel="stylesheet" href="../Style/CSS/admin.css">
+    <link rel="stylesheet" href="../Style/CSS/modifier.css">
 </head>
 <body>
 

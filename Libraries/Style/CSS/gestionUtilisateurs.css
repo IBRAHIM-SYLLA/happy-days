@@ -1,6 +1,10 @@
 @import url(./palette.css);
 @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 
+#gestionUser {
+    margin-top: 5%;
+}
+
 #gestionUser .heading {
     font-family: Prompt;
     text-align: center;
@@ -124,4 +128,22 @@
     margin-right: 5px;
     border-radius: 5px;
     content: "Email";
+}
+
+#gestionUser #back {
+    background-image: url(../Icons/left-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: left 10px center;
+    text-align: right;
+    font-size: 22px;
+    font-family: Prompt;
+    padding: 10px;
+    padding-left: 40px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    border-width: 0;
+    background-color: var(--primary-light);
 }

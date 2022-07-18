@@ -1,26 +1,18 @@
 <?php
 require_once '../Models/User.php';
 require_once '../Controllers/admin.php';
+require_once '../Imports/header.php';
 $idUser = $_GET['id'];
 
 $user = new User();
 $dataUser = $user->selectAllWhereId($idUser);
-var_dump($dataUser);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<form action="" method="post">
+<a href="gestionUser.php" id="back">Retour</a>
+
+<form action="" method="post" id="modifier">
 
         <select name="id_right" id="">
-            <option><?=$dataUser[0]['id_right']?></option>
             <option>1</option>
             <option>2</option>
         </select>
@@ -42,6 +34,8 @@ var_dump($dataUser);
         <button id="update" type="submit" name="update">Mettre a jour</button>
         <a href="../../index.php">Revenir</a>
     </form>
-    <a href="gestionUser.php"><button>retour</button></a>
-</body>
-</html>
+
+
+<?php
+require_once '../Imports/footer.php';
+?>

@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <a href="gestionUser.php">Users</a>
-    <a href="gestionEvent.php">Event</a>
-</body>
-</html>
+<?php
+require_once "../Imports/header.php"
+?>
+
+<section id="admin">
+
+<div id="admin-card">
+    <h1>Gestion administrateur</h1>
+    <span class="line"></span>
+    <a href="gestionUser.php">Gestion des utilisateurs</a>
+    <span class="line"></span>
+    <a href="gestionEvent.php">Gestion des évènements</a>
+</div>
+
+</section>
+
+<?php
+require_once "../Imports/footer.php" ?>
