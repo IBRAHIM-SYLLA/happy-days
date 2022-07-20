@@ -64,6 +64,7 @@ require_once '../Imports/header.php';
         <div class="field">
             <label for ="password"><span class="required-symbol">-</span> Mot de passe</label>
             <input id="password" type="password" name="password" placeholder="Mot de passe" required/>
+            <p id="password-check"></p>
         </div>
 
         <div class="field">
@@ -89,6 +90,8 @@ require_once '../Imports/header.php';
     <div style="text-align:center; margin-top:40px;" id="step-cont"></div>
 
 </form>
+
 </section>
+<div class="error-cont"></div>
 
 <?php include_once '../Imports/footer.php'; ?>

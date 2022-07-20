@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-<<<<<<< HEAD
-=======
-    
->>>>>>> dev
         let root;
         let url = window.location.href;
         
@@ -20,10 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             root +'Style/Images/Slider/2.png', 
             root +'Style/Images/Slider/3.png'
         );
-<<<<<<< HEAD
-=======
-    
->>>>>>> dev
 
 
     const imgCont = document.querySelector('#img-cont');
