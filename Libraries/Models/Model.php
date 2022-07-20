@@ -1,6 +1,6 @@
 <?php
 
-class Model{
+abstract class Model{
 
     protected $table;
 
@@ -12,6 +12,7 @@ class Model{
         return $bdd;
     }
 
+    // dans ces method je trnasforme le nom des tables en variable pour eviter de répéter du code donc de l'optimiser
     public function selectAllWhereId($id){
 
         $sql = $this->bdd->prepare("SELECT * FROM {$this->table} WHERE `id` = ?");
