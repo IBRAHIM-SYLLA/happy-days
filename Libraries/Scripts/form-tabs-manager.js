@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         steps[n].className += " active";
         
+        // pour chaque étape qui n'est pas celle où l'user est, on la cache
         if(document.querySelector('#prevBtn') != null) {
             if (n == 0) {
                 document.querySelector("#prevBtn").style.visibility = "hidden";

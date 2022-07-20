@@ -23,7 +23,6 @@ require_once('../Imports/header.php');
 
         <tbody>
     <?php foreach($allUsers as $allUser):?>
-        <a href="lireUser?id=<?= $allUser['id']?>">
         <tr>
             <td class="id-row"><?= $allUser['id']; ?></td>
             <td class="fn-row"><?= $allUser['firstname']; ?></td>
@@ -35,7 +34,6 @@ require_once('../Imports/header.php');
                 <a href="deleteUser.php?id=<?= $allUser['id']?>">Supprimer</a>
             </td>
         </tr>
-        </a>
     <?php endforeach; ?>
         </tbody>
     </table>
