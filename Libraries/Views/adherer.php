@@ -8,6 +8,8 @@ require_once '../Imports/header.php';
 <div id="adhesion-card">
     <h1>Voulez allez procéder au paiement pour adhérer.</h1>
     <h3>Les frais d'adhésion sont de 10€</h3>
+
+    <p><b><u>Note:</u></b> L'adhésion est le seul moyen de participer aux évènements.</p>
     <a href="paiement.php">J'adhère !</a>
 </div>
 

@@ -12,7 +12,8 @@ require_once '../includes/SMTP.php';
         $data = trim($data);
         //stripslashes supprimes les antishlashs
         $data = stripslashes($data);
-        //htmlspecialchars permet d'échapper certains caractéres spéciaux et les transforment en entité HTML
+        //htmlspecialchars permet d'échapper certains caractéres 
+        //spéciaux et les transforment en entité HTML
         $data = htmlspecialchars($data);
         return $data;
     }

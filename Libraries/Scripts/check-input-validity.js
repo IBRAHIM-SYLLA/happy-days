@@ -15,6 +15,9 @@ const passwordInput = document.querySelector('input[name="password"]');
 // la balise <p> dans laquelle je vais afficher le texte qui informe l'user de la viabilité
 const passwordCheckP = document.querySelector('#password-check');
 
+
+const inputs = document.querySelectorAll('input');
+
 // couleurs du texte
 const colors = [ "red", "gold", "green" ];
 let currColor;
@@ -45,6 +48,31 @@ if(passwordInput != null && passwordCheckP != null) {
 
         passwordCheckP.style.color = currColor;
         passwordInput.style.borderBottomColor = currColor;
+    })
+}
+
+
+if(inputs.length > 0) {
+    inputs.forEach((input) => {
+
+            // si l'utilisateur a perdu le focus sur l'input
+            input.addEventListener('focusout', () => {
+                // si l'utilisateur n'a rien entré dans l'input
+                if(input.value === "") {
+                    let newElement = document.createElement('p');
+                    newElement.className = 'field-alert';
+
+                    // TODO: vérifier si le field-alert n'existe pas déjà
+                    // créé un élément provisoire
+                    input.after(newElement);
+        
+                    newElement.textContent = "Ce champ est obligatoire";
+                }
+                // sinon, si l
+                else if(input.value !== "" && !!document.querySelector('field-alert')) {
+                    document.querySelector('field-alert').textContent = "";
+                }
+            })
     })
 }
 

@@ -93,3 +93,8 @@
     text-align: right;
     padding-right: 10px;
 }
+
+#connexion .field-alert {
+    font-style: italic;
+    color: red;
+}
