@@ -8,7 +8,7 @@ require_once '../Controllers/functions.php';
 // ---------------------------- User ------------------------//
 $user = new User();
 
-$allUsers = $user->selectAllUsers();
+$allUsers = $user->selectAllData();
 
 function updateUserAdmin($email, $adress, $zip_code, $city, $id_right, $phone_number){
 
@@ -96,7 +96,7 @@ if(isset($_POST['registerAdmin'])){
 
 $event = new Event();
 
-$allEvents = $event->selectAllEvents();
+$allEvents = $event->selectAllData();
 
 function update_event($name, $date, $heuredebut, $description){
 

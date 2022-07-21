@@ -45,6 +45,7 @@ var_dump($_POST);
         <input type="file" name="image" id="">
 
         <button type="submit" name="creer">Créer</button>
+        <a href="gestionEvent.php"><button>retour</button></a>
     </form>
 </body>
 </html>

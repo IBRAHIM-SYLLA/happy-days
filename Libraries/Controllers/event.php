@@ -1,10 +1,13 @@
 <?php
 session_start();
 require_once '../Models/Event.php';
+require_once '../Models/User.php';
 require_once 'functions.php';
 
 $event = new Event();
-
+$users = new User();
+$dataUsers = $users->selectAllUsers();
+// var_dump($dataUsers);
 if (isset($_POST['creer'])){
 
     if (!empty($_POST['name']) && !empty($_POST['description']) &&
@@ -61,14 +64,15 @@ if (isset($_POST['creer'])){
             $bddfilename =  $newname.'.'.$extension;
 
             $event->registerEvent($name, $dateEvent, $description, $bddfilename);
-            sendMail("ibrah@ibra.com", "nouvelle évènement");
+
+            foreach($dataUsers as $dataUser){
+                sendMailEvent($dataUser['email'], $name, $dateEvent);
+            }
         }
     }
     else{
         echo 'champ vide';
     }
-
-    $fetchAllEvents = $event->selectAllEvents();
 
     // if (!empty($_POST['date'])) {
 //     $date = $_POST['date'];
@@ -80,11 +84,7 @@ if (isset($_POST['creer'])){
 // }
 
 
-
-
-
-
-
 }
 
+$fetchAllEvents = $event->selectAllEvents();
 ?>

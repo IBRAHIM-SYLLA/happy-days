@@ -18,7 +18,7 @@ require_once '../Controllers/admin.php';
             <td class="id-row"><?= $allEvent['id']; ?></td>
             <td class="fn-row"><?= $allEvent['name']; ?></td>
             <td class="ln-row"><?= $allEvent['date']; ?></td>
-            <td class="link-row"><a href="lireEvent?id=<?= $allEvent['id']?>"><button type="submit">Lire</button></a></td>
+            <td class="link-row"><a href="lireEvent.php?id=<?= $allEvent['id']?>"><button type="submit">Lire</button></a></td>
             <td class="link-row"><a href="modifierEvent.php?id=<?= $allEvent['id']?>"><button type="submit">Modfier</button></a></td>
             <td class="link-row"><a href="deleteEvent.php?id=<?= $allEvent['id']?>"><button type="submit">Supprimer</button></a></td>
         </tr>

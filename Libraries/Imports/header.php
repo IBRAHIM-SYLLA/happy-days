@@ -7,24 +7,9 @@
     <title>Document</title>
 
     <script src="../Scripts/burger-menu-manager.js"></script>
-    
-    <?php
-    $hasForm = false;
-    if($hasForm): ?>
-        <script src="../Scripts/form-tabs-manager.js"></script>
-    <?php endif; ?>
+    <script src="../Scripts/form-tabs-manager.js"></script>
+    <script src="../Scripts/check-input-validity.js"></script>
 
-<<<<<<< HEAD
-    <?php
-    // vérifie si l'user est sur mobile ou non
-    function isMobile() {
-        return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
-    }
-    isMobile() ? $cssDIR = "../Style/CSS/Mobile/" : $cssDIR = "../Style/CSS/Desktop/";
-    ?>
-
-    <link rel="stylesheet" href="<?= $cssDIR ?>style.css">
-=======
     <link rel="stylesheet" href="../Style/CSS/index.css">
     <link rel="stylesheet" href="../Style/CSS/inscription.css">
     <link rel="stylesheet" href="../Style/CSS/header.css">
@@ -32,16 +17,16 @@
     <link rel="stylesheet" href="../Style/CSS/index.css">
     <link rel="stylesheet" href="../Style/CSS/inscription.css">
     <link rel="stylesheet" href="../Style/CSS/connexion.css">
->>>>>>> dev
+    <link rel="stylesheet" href="../Style/CSS/gestionUtilisateurs.css">
+    <link rel="stylesheet" href="../Style/CSS/lireUser.css">
+    <link rel="stylesheet" href="../Style/CSS/adherer.css">
+    <link rel="stylesheet" href="../Style/CSS/admin.css">
+    <link rel="stylesheet" href="../Style/CSS/modifier.css">
 </head>
 <body>
 
 <header>
-<<<<<<< HEAD
-    <a href="index.php"><img src="../Style/Images/logo.png" id="logo"></a>
-=======
-    <a href="index.php"><img src="../Style/Images/logo.png" class="logo"></a>
->>>>>>> dev
+    <a href="../../index.php"><img src="../Style/Images/logo.png" class="logo"></a>
 </header>
 
 

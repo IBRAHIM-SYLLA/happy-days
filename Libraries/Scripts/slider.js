@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-<<<<<<< HEAD
-=======
-    
->>>>>>> dev
         let root;
         let url = window.location.href;
         
@@ -15,15 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
             root = "./";
         }
     
+        // pour ajouter une image au slider, il faut la renseigner dans l'array
         let slide = new Array(
             root +'Style/Images/Slider/1.png', 
             root +'Style/Images/Slider/2.png', 
             root +'Style/Images/Slider/3.png'
         );
-<<<<<<< HEAD
-=======
-    
->>>>>>> dev
 
 
     const imgCont = document.querySelector('#img-cont');

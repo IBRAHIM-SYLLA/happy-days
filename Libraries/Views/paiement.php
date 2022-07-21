@@ -1,17 +1,8 @@
 <?php
 require_once '../Controllers/paiement.php';
+require_once '../Imports/header.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../Controllers/js/script.js"></script>
-    <title>Document</title>
-</head>
-<body>
     <form action="" method="post">
         <div id="errors">
             <!-- contiendra les messages d'érreurs de paiement -->
@@ -27,5 +18,7 @@ require_once '../Controllers/paiement.php';
 
     </form>
     <script src="https://js.stripe.com/v3/"></script>
-</body>
-</html>
+
+<?php 
+require_once '../Imports/footer.php'; 
+?>

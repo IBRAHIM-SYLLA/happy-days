@@ -4,7 +4,7 @@ require_once '../Models/Event.php';
 
 $idEvent = $_GET['id'];
 
-$dataEvent = $event->selectEvent($idEvent);
+$dataEvent = $event->selectAllWhereId($idEvent);
 
 ?>
 
@@ -21,5 +21,6 @@ $dataEvent = $event->selectEvent($idEvent);
     <?= $dataEvent[0]['name']; ?><br>
     <?= $dataEvent[0]['date']; ?><br>
     <?= $dataEvent[0]['description']; ?>
+    <a href="gestionEvent.php"><button>retour</button></a>
 </body>
 </html>

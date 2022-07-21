@@ -14,6 +14,7 @@ class User extends Model {
     public $city;
     public $id_right;
     public $phone_number;
+    protected $table = 'users';
 
 
     public function register($civility, $firstname, $lastname, $email, $password, $adress, $zip_code, $city, $phone_number) {
@@ -30,32 +31,10 @@ class User extends Model {
         return $fetch_email;
     }
 
-    public function selectAllUsers(){
-
-        $sql = $this->bdd->prepare("SELECT * FROM users");
-        $sql->execute();
-        $fetch = $sql->fetchAll();
-        return $fetch;
-    }
-
-    public function selectUser($idUser){
-
-        $sql = $this->bdd->prepare("SELECT * FROM users WHERE `id` = ?");
-        $sql->execute(array($idUser));
-        $fetch = $sql->fetchAll();
-        return $fetch;
-    }
-
     public function update_user($email, $password, $adress, $zip_code, $city, $phone_number, $idUser){
 
         $sql = $this->bdd->prepare("UPDATE `users` SET `email`= ?,`password`= ?,`adress`= ?,`zip_code`= ?,`city`= ?,`phone_number`= ? WHERE `id`= ?");
         $sql->execute(array($email, $password, $adress, $zip_code, $city, $phone_number, $idUser));
-    }
-
-    public function delete_user($idUser){
-
-        $sql = $this->bdd->prepare("DELETE FROM `users` WHERE id = ?");
-        $sql->execute(array($idUser));
     }
 
     public function update_user_admin($email, $adress, $zip_code, $city, $id_right ,$phone_number, $idUser){
