@@ -2,6 +2,7 @@
 session_start();
 require_once '../Controllers/connexion.php';
 require_once '../Imports/header.php';
+var_dump($_SESSION);
 ?>
 
 <section id="connexion">
