@@ -27,7 +27,7 @@ footer {
 }
 
 #left-links, #right-links {
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 35vw;
     display: flex;
     flex-direction: row;
