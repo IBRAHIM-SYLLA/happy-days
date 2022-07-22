@@ -9,8 +9,11 @@ require_once '../Imports/header.php';
     <h1>Voulez allez procéder au paiement pour adhérer.</h1>
     <h3>Les frais d'adhésion sont de 10€</h3>
 
-    <p><b><u>Note:</u></b> L'adhésion est le seul moyen de participer aux évènements.</p>
+    <p><b><u>Note:</u></b> L'adhésion permet d'être aventageux lors des évènement.</p>
+    <?php if(!empty($_SESSION)): ?>
     <a href="paiement.php">J'adhère !</a>
+    <?php  endif; ?>
+    <a href="connexion.php">Veuillez d'abord vous connecter</a>
 </div>
 
 </section>
