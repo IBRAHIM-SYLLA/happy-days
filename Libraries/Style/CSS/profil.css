@@ -1,0 +1,39 @@
+@import url(palette.css);
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+#profil #title {
+    text-align: center;
+    font-family: Prompt;
+    color: var(--primary-dark);
+}
+
+#profil form {
+    font-family: Prompt;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    border: 3px solid var(--primary);
+    border-bottom-width: 10px;
+    background-color: var(--primary-lighter);
+    display: flex;
+    flex-direction: column;
+}
+
+#profil .field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#profil .field input {
+    border: none;
+    border-radius: 5px;
+}
+
+#profil .field:nth-child(odd) {
+    background-color: rgba(0,0,0,0.1);
+}
+
+#profil form * {
+    padding: 5px 5px;
+}

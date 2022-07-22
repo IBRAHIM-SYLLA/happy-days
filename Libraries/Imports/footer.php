@@ -3,8 +3,13 @@
 <footer>
     <div id="myLinks">
         <div id="left-links">
-            <a href="../Views/presentation.php"><img src="../Style/Icons/info.png"></a>
-            <a href="../Views/nos-actions.php"><img src="../Style/Icons/basketball.png" alt=""></a>
+            <?php if(isset($_SESSION)) { ?>
+                <button type="submit" name="deconnex"></button>
+                <a href="../Views/profil.php"><img src="../Style/Icons/avatar.png" alt=""></a>
+            <?php } else { ?>
+                <a href="../Views/connexion.php"><img src="../Style/Icons/login.png" alt=""></a>
+                <a href="../Views/inscription.php"><img src="../Style/Icons/add-user.png" alt=""></a>
+            <?php } ?>
         </div>
         <button class="icon-btn" id="burger-btn" onclick="showNav()"></button>
         <div id="right-links">

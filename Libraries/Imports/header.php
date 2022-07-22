@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Happy Day</title>
 
     <script src="../Scripts/burger-menu-manager.js"></script>
     <script src="../Scripts/form-tabs-manager.js"></script>
     <script src="../Scripts/check-input-validity.js"></script>
+    <script src="../Controllers/js/script.js"></script>
 
     <link rel="stylesheet" href="../Style/CSS/index.css">
     <link rel="stylesheet" href="../Style/CSS/inscription.css">
@@ -22,6 +23,9 @@
     <link rel="stylesheet" href="../Style/CSS/adherer.css">
     <link rel="stylesheet" href="../Style/CSS/admin.css">
     <link rel="stylesheet" href="../Style/CSS/modifier.css">
+    <link rel="stylesheet" href="../Style/CSS/paiement.css">
+    <link rel="stylesheet" href="../Style/CSS/confirmation.css">
+    <link rel="stylesheet" href="../Style/CSS/profil.css">
 </head>
 <body>
 
