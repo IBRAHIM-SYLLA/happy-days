@@ -108,4 +108,92 @@ require_once '../includes/SMTP.php';
         }
     }
 
+    function sendMailProfil($email, $prenom){
+
+        // on passe le constructeur a un true parcequ'on gère les exception
+        $mail = new PHPMailer(true);
+
+        // on gère les exceptions donc try catch
+        try{
+            // Configuration
+            // $mail->SMTPDebug = SMTP::DEBUG_SERVER; // Je veux des info de debug
+
+            // On configure le SMTP (Simple Mail Transfer Protocol)
+            $mail->isSMTP();
+            $mail->Host = 'localhost';
+            $mail->Port = 1025;
+
+            // Charset = utf8
+            $mail->CharSet = 'utf-8';
+
+            // Destinataires
+            $mail->addAddress($email);
+            $mail->addCC("copie@site.fr");
+            $mail->addBCC("copiecachee@site.fr");
+
+            // Expéditeur
+            $mail->setFrom("no-reply@site.fr");
+
+            // Contenu
+            // si on veut mettre du html
+            $mail->isHTML();
+            $mail->Subject = "Profil";
+
+            $mail->Body = "<p><strong>".$prenom." tes information on étaient correctement modifier</strong></p>";
+
+            // pour les personnes qui ont des outils qui ne peuvent pas lire le html
+            $mail->AltBody = $prenom." tes information on étaient correctement modifier";
+            // on envoie
+            $mail->send();
+            echo "message envoyé";
+        }
+        catch(Exception $e){
+            echo "Message non envoyé. Erreur; {$mail->ErrorInfo}";
+        }
+    }
+
+    function sendMailPaiement($email){
+
+        // on passe le constructeur a un true parcequ'on gère les exception
+        $mail = new PHPMailer(true);
+
+        // on gère les exceptions donc try catch
+        try{
+            // Configuration
+            // $mail->SMTPDebug = SMTP::DEBUG_SERVER; // Je veux des info de debug
+
+            // On configure le SMTP (Simple Mail Transfer Protocol)
+            $mail->isSMTP();
+            $mail->Host = 'localhost';
+            $mail->Port = 1025;
+
+            // Charset = utf8
+            $mail->CharSet = 'utf-8';
+
+            // Destinataires
+            $mail->addAddress($email);
+            $mail->addCC("copie@site.fr");
+            $mail->addBCC("copiecachee@site.fr");
+
+            // Expéditeur
+            $mail->setFrom("no-reply@site.fr");
+
+            // Contenu
+            // si on veut mettre du html
+            $mail->isHTML();
+            $mail->Subject = "Profil";
+
+            $mail->Body = "<p><strong>Nous te remercions de nous avoir rejoint a très bientôt !</strong></p>";
+
+            // pour les personnes qui ont des outils qui ne peuvent pas lire le html
+            $mail->AltBody = "Nous te remercions de nous avoir rejoint a très bientôt !";
+            // on envoie
+            $mail->send();
+            echo "message envoyé";
+        }
+        catch(Exception $e){
+            echo "Message non envoyé. Erreur; {$mail->ErrorInfo}";
+        }
+    }
+
 ?>

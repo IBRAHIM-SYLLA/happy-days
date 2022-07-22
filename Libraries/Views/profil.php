@@ -1,7 +1,7 @@
 <?php
 require_once '../Controllers/profil.php';
 var_dump($_POST);
-var_dump($_SESSION['utilisateurs'][0]['id']);
+var_dump($_SESSION['utilisateurs'][0]['email']);
 ?>
 <!DOCTYPE html>
 <html lang="en">

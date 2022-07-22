@@ -18,8 +18,8 @@ if(!empty($_SESSION)){
         'amount' => $prix * 100,  //prix en centimes
         'currency' => 'eur'       // on indique la monnaie utilisé
     ]);
-    $user->update_member_state($idUser);
-    sendMail($emailUser, $_SESSION['utilisateurs'][0]['lastname']);
+    // $user->update_member_state($idUser);
+    // sendMail($emailUser, $_SESSION['utilisateurs'][0]['lastname']);
 }
 else{
     header('Location: adherer.php');

@@ -5,7 +5,7 @@ require_once 'functions.php';
 
 
 $user = new User();
-$dataUser = $user->verify_and_connect($_SESSION['utilisateurs'][0]['email']);
+$dataUser = $user->selectAllWhereId($_SESSION['utilisateurs'][0]['id']);
 
 if (isset($_POST['update'])){
     if (!empty($_POST['email']) && !empty($_POST['adress']) && !empty($_POST['zip_code']) && !empty($_POST['city']) && !empty($_POST['phone_number'])){
@@ -24,6 +24,7 @@ if (isset($_POST['update'])){
             if ($password == $password_conf){
                 $password = password_hash($password, PASSWORD_BCRYPT);
                 $user->update_user($email, $password, $adress, $zip_code, $city, $phone_number, $id);
+                sendMailProfil($email, $dataUser[0]['lastname']);
                 header('Refresh: 0');
             }
             else{

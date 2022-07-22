@@ -1,3 +1,10 @@
+<?php
+require_once '../Controllers/paiement.php';
+require_once '../Controllers/functions.php';
+$user->update_member_state($idUser);
+sendMailPaiement($emailUser);
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>

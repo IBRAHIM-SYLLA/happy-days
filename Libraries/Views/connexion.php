@@ -24,7 +24,7 @@ require_once '../Imports/header.php';
         <p class="connexion-suggestion">Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous</a></p>
         
         <div id="btn-cont">
-            <button id="register" type="submit" name="register" class="icon-btn">Se connecter</button>
+            <button id="register" type="submit" name="connect" class="icon-btn">Se connecter</button>
         </div>
     
         <!-- <div style="overflow:auto;">
