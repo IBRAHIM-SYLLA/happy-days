@@ -101,7 +101,7 @@ require_once '../includes/SMTP.php';
             évènement:" .$nameEvent." "."qui aura lieu le ".$dateEvent;
             // on envoie
             $mail->send();
-            echo "message envoyé";
+            // echo "message envoyé";
         }
         catch(Exception $e){
             echo "Message non envoyé. Erreur; {$mail->ErrorInfo}";
@@ -145,7 +145,7 @@ require_once '../includes/SMTP.php';
             $mail->AltBody = $prenom." tes information on étaient correctement modifier";
             // on envoie
             $mail->send();
-            echo "message envoyé";
+            // echo "message envoyé";
         }
         catch(Exception $e){
             echo "Message non envoyé. Erreur; {$mail->ErrorInfo}";
@@ -189,7 +189,7 @@ require_once '../includes/SMTP.php';
             $mail->AltBody = "Nous te remercions de nous avoir rejoint a très bientôt !";
             // on envoie
             $mail->send();
-            echo "message envoyé";
+            // echo "message envoyé";
         }
         catch(Exception $e){
             echo "Message non envoyé. Erreur; {$mail->ErrorInfo}";
