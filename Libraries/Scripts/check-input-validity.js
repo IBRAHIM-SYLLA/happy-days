@@ -63,9 +63,8 @@ if(inputs.length > 0) {
                     newElement.className = 'field-alert';
 
                     // TODO: vérifier si le field-alert n'existe pas déjà
-                    // créé un élément provisoire
+                        // créé un élément provisoire
                     input.after(newElement);
-        
                     newElement.textContent = "Ce champ est obligatoire";
                 }
                 // sinon, si l

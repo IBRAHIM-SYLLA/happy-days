@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Merci d'avoir adhérer</h1>
-</body>
-</html>
+<?php 
+require_once "../Imports/header.php";
+?>
+
+<div id="membership-conf">
+    <h1>Merci d'avoir adhéré</h1>
+    <img src="../Style/Icons/checkmark2.png" alt="">
+</div>
+
+<?php
+require_once "../Imports/footer.php";
+?>

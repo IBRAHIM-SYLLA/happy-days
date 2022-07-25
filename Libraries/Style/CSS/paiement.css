@@ -1,0 +1,50 @@
+@import url(palette.css);
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+.card-form {
+    border: 3px solid rgb(82, 82, 139);
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px 10px;
+    padding-top: 0;
+    background-image: linear-gradient(
+        to bottom right,
+        rgb(129, 129, 202),
+        rgb(78, 121, 78)
+    );
+    display: flex;
+    flex-direction: column;
+}
+
+.card-form #card-elements {
+    background-color: rgba(255,255,255,0.4);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.card-form #cardholder-name {
+    border: none;
+    padding: 5px;
+    background-color: rgba(255,255,255,0.4);
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.card-form #card-button {
+    border: none;
+    padding: 10px;
+    background-color: rgb(99, 247, 99);
+    border-radius: 20px;
+    width: fit-content;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.card-form #title {
+    font-family: Prompt;
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    margin: 5px;
+}
