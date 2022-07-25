@@ -5,11 +5,12 @@ body {
     max-width: 100%;
 }
 
-#lireEvent {
+#modifierUser {
     margin-top: 20px;
+    margin-bottom: 70px;
 }
 
-#lireEvent #event-card {
+form[name="user-card"] {
     margin: 5%;
     padding: 5%;
     background-color: var(--primary-light);
@@ -24,18 +25,18 @@ body {
     flex-direction: column;
 }
 
-#lireEvent #event-card h3, #lireEvent #event-card p {
+form[name="user-card"] h3, form[name="user-card"] p {
     vertical-align: baseline;
 }
 
-#lireEvent #event-card #title {
+form[name="user-card"] #title {
     text-align: center;
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 2px solid var(--primary);
 }
 
-#lireEvent #back {
+#modifierUser #back {
     background-image: url(../Icons/left-arrow.png);
     background-repeat: no-repeat;
     background-size: 15%;
@@ -53,20 +54,51 @@ body {
     background-color: var(--primary-light);
 }
 
-#lireEvent #event-img {
+#modifierUser #user-img {
     width: 100%;
     object-fit: cover;
     margin-bottom: 20px;
 }
 
-#lireEvent #event-card .field {
+form[name="user-card"] span {
+    margin: 5px auto;
+}
+
+#modifierUser form[name="user-card"] .field input,
+#modifierUser form[name="user-card"] .field select,
+#modifierUser form[name="user-card"] .field textarea {
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+#modifierUser #user-img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+#modifierUser form[name="user-card"] .field {
     display: flex;
     flex-direction: column;
     margin: 5px auto;
     width: 100%;
 }
 
-#lireEvent #event-card .field label {
+#modifierUser form[name="user-card"] .field label {
     align-self: flex-start;
 }
 
+button[name="update"] {
+    background-color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+}
+
+#modifierUser .icon {
+    width: 20px;
+    height: auto;
+    align-self: center;
+}

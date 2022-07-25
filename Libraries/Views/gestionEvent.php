@@ -8,7 +8,7 @@ require_once '../Imports/header.php';
 
 <div class="heading">
     <h1><?= sizeof($allEvents) ?></h1>
-    <h1>évènements sont enregistrés dans la base de données.</h1>
+    <h3>évènements sont enregistrés dans la base de données.</h3>
 </div>
 
 <a href="creerEvent.php" class="new-event">Créer un évènement</a>
