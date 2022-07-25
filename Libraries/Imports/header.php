@@ -19,7 +19,9 @@
     <link rel="stylesheet" href="../Style/CSS/inscription.css">
     <link rel="stylesheet" href="../Style/CSS/connexion.css">
     <link rel="stylesheet" href="../Style/CSS/gestionUtilisateurs.css">
+    <link rel="stylesheet" href="../Style/CSS/gestionEvent.css">
     <link rel="stylesheet" href="../Style/CSS/lireUser.css">
+    <link rel="stylesheet" href="../Style/CSS/lireEvent.css">
     <link rel="stylesheet" href="../Style/CSS/adherer.css">
     <link rel="stylesheet" href="../Style/CSS/admin.css">
     <link rel="stylesheet" href="../Style/CSS/modifier.css">
