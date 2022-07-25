@@ -4,6 +4,7 @@ require_once '../Imports/header.php';
 ?>
 <section id="profil">
     <h1 id="title">Votre profil</h1>
+    <a href="../../index.php" class="back-btn">Retour</a>
     <form action="" method="post">
         <div class="field">        
             <label for ="email">Email</label>
@@ -35,7 +36,6 @@ require_once '../Imports/header.php';
         </div>
 
         <button id="update" type="submit" name="update">Mettre a jour</button>
-        <a href="../../index.php">Revenir</a>
     </form>
 </section>
 <?php 

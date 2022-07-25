@@ -5,12 +5,13 @@
     text-align: center;
     font-family: Prompt;
     color: var(--primary-dark);
+    margin-bottom: 20px;
 }
 
 #profil form {
     font-family: Prompt;
     width: 90%;
-    margin: auto;
+    margin: 40px auto;
     padding: 10px;
     border: 3px solid var(--primary);
     border-bottom-width: 10px;
@@ -36,4 +37,32 @@
 
 #profil form * {
     padding: 5px 5px;
+}
+
+#profil .back-btn {
+    background-image: url(../Icons/left-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: left 10px center;
+    text-align: right;
+    font-size: 22px;
+    font-family: Prompt;
+    padding: 10px;
+    padding-left: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    border-width: 0;
+    background-color: var(--primary-light);
+}
+
+#profil #update {
+    width: 60%;
+    padding: 10px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 50px;
+    background-color: #eee;
 }

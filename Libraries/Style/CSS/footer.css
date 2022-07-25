@@ -19,7 +19,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
+    width: 100%;
 }
 
 #myLinks a {
