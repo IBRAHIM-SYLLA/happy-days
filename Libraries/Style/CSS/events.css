@@ -1,0 +1,32 @@
+@import url(palette.css);
+
+#allEvents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.event{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 230px;
+    margin-bottom: 50px;
+    box-shadow: var(--primary) 0px 2px 4px 0px, var(--primary) 0px 2px 16px 0px;
+    border-radius: 10px;
+}
+.event img {
+    height: 150px;
+    width: 320px;
+    border-radius: 10px;
+}
+.event button {
+    border: none;
+    width: 100px;
+    height: 30px;
+    background-color: var(--primary);
+    color: white;
+}
+

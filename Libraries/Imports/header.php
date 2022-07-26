@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="../Style/CSS/paiement.css">
     <link rel="stylesheet" href="../Style/CSS/confirmation.css">
     <link rel="stylesheet" href="../Style/CSS/profil.css">
+    <link rel="stylesheet" href="../Style/CSS/events.css">
 </head>
 <body>
 
