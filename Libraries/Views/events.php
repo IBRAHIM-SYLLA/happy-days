@@ -9,7 +9,7 @@ require_once '../Imports/header.php';
                 <img src="../uploads/<?=$fetchAllEvent['image']; ?>" alt="">
                 <h4><?= $fetchAllEvent['name']; ?></h4>
                 <h4><?= $fetchAllEvent['date']; ?></h4>
-                <a href="event.php?id=<?=$fetchAllEvent['id']; ?>"><button>Voir l'event</button></a>
+                <a href="event.php?id=<?=$fetchAllEvent['id']; ?>" name="see-event-btn">Voir l'event</a>
             </div>
     <?php endforeach; ?>
 </section>

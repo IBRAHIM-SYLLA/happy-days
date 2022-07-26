@@ -7,7 +7,7 @@
 
 .slider {
     position: relative;
-    outline: 1px solid green;
+    /* outline: 1px solid green; */
     margin: auto;
     width: 80vw;
     height: 500px;
@@ -78,13 +78,6 @@ li#li-icon {
     padding: 30px 10%;
     margin: 20px 0;
     font-family: "Prompt";
-}
-
-.slider {
-    margin: 0 auto;
-    width: 90vw;
-    height: 200px;
-    position: relative;
 }
 
 .slider-btn {
@@ -161,7 +154,7 @@ iframe {
     .slider {
         margin: 0 auto;
         width: 90vw;
-        height: 200px;
+        /* height: 200px; */
         position: relative;
     }
 

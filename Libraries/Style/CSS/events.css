@@ -1,32 +1,73 @@
 @import url(palette.css);
 
 #allEvents{
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: "Prompt";
 }
+
 .event{
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 350px;
-    height: 230px;
+    align-items: center;
+    font-family: "Prompt";
+    width: 90%;
+    height: fit-content;
+    margin: auto;
     margin-bottom: 50px;
-    box-shadow: var(--primary) 0px 2px 4px 0px, var(--primary) 0px 2px 16px 0px;
     border-radius: 10px;
+    border: 5px solid var(--primary);
+    border-bottom-width: 10px;
+    padding: 10px 0;
+    background-color: var(--primary-lighter);
 }
+
+.event * {
+    margin: 5px 0;
+}
+
 .event img {
+    object-fit: cover;
     height: 150px;
     width: 320px;
     border-radius: 10px;
 }
-.event button {
+.event a[name="see-event-btn"] {
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    font: "Prompt";
     border: none;
     width: 100px;
     height: 30px;
     background-color: var(--primary);
     color: white;
+    border-radius: 10px;
 }
 
+section#event #back {
+    background-image: url(../Icons/left-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: left 10px center;
+    text-align: right;
+    font-size: 22px;
+    font-family: Prompt;
+    padding: 10px;
+    padding-left: 40px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    border-width: 0;
+    width: fit-content;
+    background-color: var(--primary-light);
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
