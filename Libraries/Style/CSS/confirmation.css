@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+div#membership-conf {
+    font-family: Prompt;
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    transform: translateY(50%);
+    text-align: center;
+}
+
+div#membership-conf img {
+    width: 30%;
+    margin: auto;
+}

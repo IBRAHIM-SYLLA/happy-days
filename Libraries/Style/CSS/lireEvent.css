@@ -1,0 +1,72 @@
+@import url(./palette.css);
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+body {
+    max-width: 100%;
+}
+
+#lireEvent {
+    margin-top: 20px;
+}
+
+#lireEvent #event-card {
+    margin: 5%;
+    padding: 5%;
+    background-color: var(--primary-light);
+    border: 3px solid var(--primary);
+    border-top-width: 2px;
+    box-shadow: 0 10px 0px var(--primary);
+    /* font-family: "Noto Sans"; */
+    font-family: Prompt;
+    letter-spacing: 1px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#lireEvent #event-card h3, #lireEvent #event-card p {
+    vertical-align: baseline;
+}
+
+#lireEvent #event-card #title {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--primary);
+}
+
+#lireEvent #back {
+    background-image: url(../Icons/left-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: left 10px center;
+    text-align: right;
+    font-size: 22px;
+    font-family: Prompt;
+    padding: 10px;
+    padding-left: 40px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    border-width: 0;
+    background-color: var(--primary-light);
+}
+
+#lireEvent #event-img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+#lireEvent #event-card .field {
+    display: flex;
+    flex-direction: column;
+    margin: 5px auto;
+    width: 100%;
+}
+
+#lireEvent #event-card .field label {
+    align-self: flex-start;
+}
+

@@ -4,6 +4,8 @@ require_once('../Imports/header.php');
 ?>
 
 <section id="gestionUser">
+<a href="admin.php" id="back">Retour</a>
+
 <div class="heading">
     <h1><?= sizeof($allUsers) ?></h1>
     <h3>utilisateurs sont enregistrés dans la base de données.</h3>
