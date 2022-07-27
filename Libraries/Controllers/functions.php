@@ -197,4 +197,34 @@ require_once '../includes/SMTP.php';
         }
     }
 
+    function sendMailContact($prenom, $mailUser, $nom, $msg){
+
+        $mail = new PHPMailer(true);
+
+        try{
+            $mail->isSMTP();
+            $mail->Host = 'localhost';
+            $mail->Port = 1025;
+
+            $mail->CharSet = 'utf-8';
+
+            $mail->addAddress("happyday@gmail.com");
+            $mail->addCC("copie@site.fr");
+            $mail->addBCC("copiecachee@site.fr");
+
+            $mail->setFrom("no-reply@site.fr");
+            $mail->isHTML();
+            $mail->Subject = "Bienvenue";
+
+            $mail->Body = "<p><strong>".$prenom." ".$nom." à l'adresse mail ".$mailUser." vous a envoyé un message: ".$msg."</strong></p>";
+
+            $mail->AltBody = $prenom." ".$nom." à l'adresse mail ".$mailUser." vous a envoyé un message: ".$msg;
+
+            $mail->send();
+            echo "message envoyé";
+        }
+        catch(Exception $e){
+            echo "Message non envoyé. Erreur; {$mail->ErrorInfo}";
+        }
+    }
 ?>

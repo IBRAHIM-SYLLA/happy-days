@@ -1,9 +1,10 @@
 <?php
 require_once '../Imports/header.php';
+require_once '../Controllers/contact.php';
 ?>
 
 <section id="contact">
-<form action="">
+<form action="" method="post">
     <div class="field">
         <label for="name">Prénom</label>
         <input type="text" name="name">
@@ -23,8 +24,8 @@ require_once '../Imports/header.php';
         <label for="message">Message</label>
         <textarea name="message" id="" cols="30" rows="10"></textarea>
     </div>
-    
-    <input type="button" value="Envoyer">
+
+    <button type="submit" name="contact">Envoyer</button>
 </form>
 </section>
 
