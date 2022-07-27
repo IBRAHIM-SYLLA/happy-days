@@ -4,6 +4,7 @@ require_once '../Controllers/contact.php';
 ?>
 
 <section id="contact">
+    <h1>Formulaire de contact</h1>
 <form action="" method="post">
     <div class="field">
         <label for="name">Prénom</label>

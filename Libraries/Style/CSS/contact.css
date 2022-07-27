@@ -1,44 +1,55 @@
 @media screen and (max-width: 1000px){
 
-#contact ul {
-    list-style: none;
-    font-size: 20px;
-}
+    #contact {
+        font-family: "Prompt";
+    }
 
-#contact ul li {
-    text-align: center;
-    margin-left: 10px; 
-    background-size: 20px;
-    background-position: left center;
-    padding-left: 30px;
-    background-repeat: no-repeat;
-}
+    #contact h1 {
+        color: var(--primary);
+        text-align: center;
+        margin: 20px 0;
+    }
 
-#contact .contact-us {
-    font-family: "Prompt";
-    width: fit-content;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 5% 10%;
-    text-align: center;
-    margin: auto auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--primary-light);
-    border: 5px solid var(--primary);
-    border-bottom-width: 10px;
-}
+    #contact form {
+        background-color: var(--primary-light);
+        border: 5px solid var(--primary);
+        border-bottom-width: 10px;
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
 
-/* #contact .contact-us ul {
-    display: flex;
-} */
+    #contact .field {
+        display: flex;
+        flex-direction: column;
+    }
 
-#contact .contact-us li {
-    /* outline: 1px solid green; */
-    height: fit-content;
-}
+    #contact .field label {
+        font-weight: bold;
+    }
+
+    #contact .field input, #contact .field textarea {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 15px;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: rgba(255,255,255,0.8);
+    }
+
+    #contact button[name="contact"] {
+        font-family: "Prompt";
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 14px;
+        width: 70%;
+        background-color: white;
+        border: none;
+        border-radius: 20px;
+        margin: auto;
+        padding: 10px;
+    }
 }
