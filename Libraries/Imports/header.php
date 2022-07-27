@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="../Style/CSS/confirmation.css">
     <link rel="stylesheet" href="../Style/CSS/profil.css">
     <link rel="stylesheet" href="../Style/CSS/events.css">
+    <link rel="stylesheet" href="../Style/CSS/contact.css">
 </head>
 <body>
 
