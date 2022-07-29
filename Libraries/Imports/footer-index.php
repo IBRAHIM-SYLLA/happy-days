@@ -3,7 +3,7 @@
 <footer>
     <div id="myLinks">
         <div id="left-links">
-            <?php if(isset($_SESSION)) { ?>
+            <?php if(!empty($_SESSION)) { ?>
                 <button type="submit" name="deconnex"></button>
                 <a href="./Libraries/Views/profil.php"><img src="./Libraries/Style/Icons/avatar.png" alt=""></a>
             <?php } else { ?>
