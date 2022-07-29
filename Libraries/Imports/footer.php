@@ -4,7 +4,9 @@
     <div id="myLinks">
         <div id="left-links">
             <?php if(!empty($_SESSION)) { ?>
-                <button type="submit" name="deconnex"></button>
+                <form action="" method="post">
+                    <button type="submit" name="deconnex"></button>
+                </form>
                 <a href="../Views/profil.php"><img src="../Style/Icons/avatar.png" alt=""></a>
             <?php } else { ?>
                 <a href="../Views/connexion.php"><img src="../Style/Icons/login.png" alt=""></a>
