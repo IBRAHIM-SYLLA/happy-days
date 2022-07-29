@@ -58,7 +58,7 @@ if(inputs.length > 0) {
             // si l'utilisateur a perdu le focus sur l'input
             input.addEventListener('focusout', () => {
                 // si l'utilisateur n'a rien entré dans l'input
-                if(input.value === "") {
+                if(input.value === "" && document.querySelector('p.field-alert') == null) {
                     let newElement = document.createElement('p');
                     newElement.className = 'field-alert';
 
