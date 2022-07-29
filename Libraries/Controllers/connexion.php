@@ -8,8 +8,9 @@ if (isset($_POST['connect'])){
 
         $email = security($_POST['email']);
         $password = security($_POST['password']);
+        $regularExpression = "/^[^@]+@[^@]+\.[a-z]{2,6}$/i";
 
-        if (preg_match("/^[^@]+@[^@]+\.[a-z]{2,6}$/i", $email)){
+        if (preg_match($regularExpression, $email)){
             $user = new User();
             $verify = $user->verify_and_connect($email);
 
