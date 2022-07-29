@@ -66,3 +66,16 @@
     border-radius: 50px;
     background-color: #eee;
 }
+
+#profil #admin {
+    font-family: Prompt;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    background-color: rgba(128, 128, 128, 0.2);
+    padding: 20px;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
