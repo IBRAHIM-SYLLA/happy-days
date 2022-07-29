@@ -31,11 +31,18 @@ header .logo {
     filter: drop-shadow(0 0 5px white);
 }
 
-header #myLinks {
+header #myLinks a:not([href*="index.php"]) {
     display: none;
 }
 
+
+
 @media screen and (min-width: 1000px) {
+
+    header {
+        border-radius: 0;
+        height: fit-content;
+    }
     
     header #myLinks {
         width: fit-content;
@@ -45,6 +52,15 @@ header #myLinks {
 
     header #myLinks a {
         padding: 10px;
+        text-align:center;
+        text-decoration: none;
+        color: white;
+        font-family: Prompt;
+        transition: background-color 1s;
+    }
+
+    header #myLinks a:not([href*="index.php"]):hover {
+        background-color: rgba(255,255,255,0.2);
     }
 
     header #left-links, #right-links {

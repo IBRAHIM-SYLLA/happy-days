@@ -15,7 +15,9 @@ if(isset($_POST['deconnex'])) {
         <h1>Qui sommes-nous ?</h1>
         <span class="line"></span>
     </div>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia veniam neque ad, reiciendis, consequatur nihil cumque sapiente dicta laboriosam eaque hic voluptatum accusantium? Ducimus ipsa harum ipsam nostrum accusantium deleniti.
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia veniam neque ad, reiciendis, consequatur nihil cumque sapiente dicta laboriosam eaque hic voluptatum accusantium? Ducimus ipsa harum ipsam nostrum accusantium deleniti.
+    </p>
 </div>
 
 <div class="slider" data-carousel>
@@ -32,7 +34,9 @@ if(isset($_POST['deconnex'])) {
         <h1>Nos actions</h1>
         <span class="line"></span>
     </div>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit asperiores distinctio, modi ipsam, maxime earum eligendi ea perspiciatis numquam qui eaque neque. Hic animi doloremque debitis, inventore aliquam obcaecati illum.
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit asperiores distinctio, modi ipsam, maxime earum eligendi ea perspiciatis numquam qui eaque neque. Hic animi doloremque debitis, inventore aliquam obcaecati illum.
+    </p>
 </div>
 
 <div class="presentation">
@@ -41,7 +45,9 @@ if(isset($_POST['deconnex'])) {
         <h1>Notre équipe</h1>
         <span class="line"></span>
     </div>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugiat, nam delectus dolorum eligendi corporis numquam hic! Omnis eos quia est doloremque provident nostrum quae iste, expedita cupiditate. Numquam, sit!
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugiat, nam delectus dolorum eligendi corporis numquam hic! Omnis eos quia est doloremque provident nostrum quae iste, expedita cupiditate. Numquam, sit!
+    </p>
 </div>
 
 <div class="presentation">
