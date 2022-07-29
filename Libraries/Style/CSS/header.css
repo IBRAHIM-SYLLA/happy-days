@@ -49,7 +49,7 @@ header .logo {
     }
     
     header #myLinks {
-        outline: 1px solid green;
+        /* outline: 1px solid green; */
         width: fit-content;
         margin: auto;
         display: flex;
