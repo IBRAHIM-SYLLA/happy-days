@@ -6,7 +6,7 @@ require_once 'functions.php';
 
 $event = new Event();
 $users = new User();
-$dataUsers = $users->selectAllUsers();
+$dataUsers = $users->selectAllData();
 // var_dump($dataUsers);
 if (isset($_POST['creer'])){
 
@@ -86,5 +86,5 @@ if (isset($_POST['creer'])){
 
 }
 
-$fetchAllEvents = $event->selectAllEvents();
+$fetchAllEvents = $event->selectAllData();
 ?>

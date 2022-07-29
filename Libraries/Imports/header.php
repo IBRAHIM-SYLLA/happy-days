@@ -19,13 +19,20 @@
     <link rel="stylesheet" href="../Style/CSS/inscription.css">
     <link rel="stylesheet" href="../Style/CSS/connexion.css">
     <link rel="stylesheet" href="../Style/CSS/gestionUtilisateurs.css">
+    <link rel="stylesheet" href="../Style/CSS/gestionEvent.css">
     <link rel="stylesheet" href="../Style/CSS/lireUser.css">
+    <link rel="stylesheet" href="../Style/CSS/lireEvent.css">
+    <link rel="stylesheet" href="../Style/CSS/modifierUser.css">
+    <link rel="stylesheet" href="../Style/CSS/modifierEvent.css">
+    <link rel="stylesheet" href="../Style/CSS/events.css">
     <link rel="stylesheet" href="../Style/CSS/adherer.css">
     <link rel="stylesheet" href="../Style/CSS/admin.css">
     <link rel="stylesheet" href="../Style/CSS/modifier.css">
     <link rel="stylesheet" href="../Style/CSS/paiement.css">
     <link rel="stylesheet" href="../Style/CSS/confirmation.css">
     <link rel="stylesheet" href="../Style/CSS/profil.css">
+    <link rel="stylesheet" href="../Style/CSS/events.css">
+    <link rel="stylesheet" href="../Style/CSS/contact.css">
 </head>
 <body>
 

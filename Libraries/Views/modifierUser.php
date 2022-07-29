@@ -8,34 +8,41 @@ $user = new User();
 $dataUser = $user->selectAllWhereId($idUser);
 ?>
 
+<section id="modifierUser">
 <a href="gestionUser.php" id="back">Retour</a>
 
-<form action="" method="post" id="modifier">
 
-        <select name="id_right" id="">
-            <option>1</option>
-            <option>2</option>
-        </select>
-        <label for ="email">Email :</label>
-        <input id="email" type="text" name="email" value="<?= $dataUser[0]['email'] ?>" autocomplete="off">
+<form action="" method="post" id="modifier" name="user-card">
 
-        <label for ="adress">Adresse :</label>
-        <input id="adress" type="text" name="adress" value="<?= $dataUser[0]['adress'] ?>" autocomplete="off">
+        <div class="field">
+            <img src="../Style/Icons/balance.png" class="icon" alt="">
+            <select name="id_right" id="">
+                <option>1</option>
+                <option>2</option>
+            </select>
+        </div>
 
-        <label for ="zip_code">CODE POSTALE:</label>
-        <input id="zip_code" type="text" name="zip_code" value="<?= $dataUser[0]['zip_code'] ?>" />
+        <div class="field">
+            <img src="../Style/Icons/mail.png" class="icon" alt="">
+            <input id="email" type="text" name="email" value="<?= $dataUser[0]['email'] ?>" autocomplete="off">
+        </div>
 
-        <label for ="city">Ville:</label>
-        <input id="city" type="text" name="city" value="<?= $dataUser[0]['city'] ?>"/>
+        <div class="field">
+            <img src="../Style/Icons/location-pin.png" class="icon" alt="">
+            <input id="adress" type="text" name="adress" value="<?= $dataUser[0]['adress'] ?>" autocomplete="off">
+            <input id="zip_code" type="text" name="zip_code" value="<?= $dataUser[0]['zip_code'] ?>" />
+            <input id="city" type="text" name="city" value="<?= $dataUser[0]['city'] ?>"/>
+        </div>
 
-        <label for ="phone_number">N° de téléphone:</label>
-        <input id="phone_number" type="text" name="phone_number" value="<?= $dataUser[0]['phone_number'] ?>"/>
+        <div class="field">
+            <img src="../Style/Icons/phone.png" class="icon" alt="">
+            <input id="phone_number" type="text" name="phone_number" value="<?= $dataUser[0]['phone_number'] ?>"/>
+        </div>
 
         <button id="update" type="submit" name="update">Mettre a jour</button>
-        <a href="../../index.php">Revenir</a>
     </form>
 
-
+    </section>
 <?php
 require_once '../Imports/footer.php';
 ?>

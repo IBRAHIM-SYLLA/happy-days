@@ -6,6 +6,7 @@
 body {
     min-width: 100vw;
     background-color: var(--bg-color);
+    overflow-x: hidden;
 }
 
 header {
@@ -17,11 +18,21 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
+    height: 10vh;
+}
+
+main {
+    max-width: 100%;
 }
 
 header .logo {
-    width: 50vw;
+    height: 10vh;
     margin: auto;
     display: block;
     filter: drop-shadow(0 0 5px white);
+}
+
+@media screen and (min-width: 1000px) {
+    
+    
 }

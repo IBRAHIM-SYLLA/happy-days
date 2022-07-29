@@ -19,6 +19,9 @@ if (isset($_POST['connect'])){
                     $_SESSION['utilisateurs'] = $verify;
                     header('Location: ../../index.php');
                 }
+                else{
+                    echo 'mot de passe incorrect';
+                }
             }
             else{
                 echo 'user inconnu';
