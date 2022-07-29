@@ -37,6 +37,11 @@ require_once '../Imports/header.php';
 
         <button id="update" type="submit" name="update">Mettre a jour</button>
     </form>
+
+    <?php if($_SESSION['utilisateurs'][0]['id_rights'] == 2022): ?>
+        <h2>Vous possédez les droits d'administrateur</h2>
+        <a href="./admin.php">Espace Admin</a>
+    <?php endif; ?>
 </section>
 <?php 
 require_once "../Imports/footer.php";

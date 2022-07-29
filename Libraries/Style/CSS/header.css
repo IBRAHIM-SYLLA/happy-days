@@ -6,6 +6,7 @@
 body {
     min-width: 100vw;
     background-color: var(--bg-color);
+    overflow-x: hidden;
 }
 
 header {
@@ -29,4 +30,9 @@ header .logo {
     margin: auto;
     display: block;
     filter: drop-shadow(0 0 5px white);
+}
+
+@media screen and (min-width: 1000px) {
+    
+    
 }
