@@ -19,9 +19,10 @@ if (isset($_POST['register'])){
         $zip_code = security($_POST['zip_code']);
         $city = security($_POST['city']);
         $phone_number = security($_POST['phone_number']);
-
+        $regularExpemail = "/^[^@]+@[^@]+\.[a-z]{2,6}$/i";
+        $regularExpnumber = '/^[0-9]{10}+$/';
         // je compare le contenu des champs avec les expressions regulière a l'aide de la fontion preg_match()
-        if (preg_match("/^[^@]+@[^@]+\.[a-z]{2,6}$/i", $email) && preg_match('/^[0-9]{10}+$/', $phone_number)){
+        if (preg_match( $regularExpemail, $email) && preg_match($regularExpnumber, $phone_number)){
 
             // je vérifie si l'email et déja présent en Bdd
             $verify = $user->verify_and_connect($email);
