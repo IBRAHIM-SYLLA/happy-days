@@ -14,7 +14,7 @@ footer {
     z-index: 2;
 }
 
-#myLinks {
+footer #myLinks {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -22,22 +22,22 @@ footer {
     width: 100%;
 }
 
-#myLinks a {
+footer #myLinks a {
     padding: 10px;
 }
 
-#left-links, #right-links {
+footer #left-links, #right-links {
     justify-content: space-evenly;
     width: 35vw;
     display: flex;
     flex-direction: row;
 }
 
-#left-links img, #right-links img {
+footer #left-links img, footer #right-links img {
     width: 30px;
 }
 
-#burger-btn {
+footer #burger-btn {
     position: static;
     transform: translateY(-54px);
     margin: auto;
@@ -54,7 +54,7 @@ footer {
     transition: transform 1s;
 }
 
-#left-links button[name="deconnex"]{
+footer #left-links button[name="deconnex"]{
     width: 50px;
     height: 50px;
     background-image: url(../Icons/logout.png);
@@ -63,4 +63,15 @@ footer {
     background-position: center;
     border: none;
     background-color: transparent;
+}
+
+
+@media screen and (min-width: 1000px) {
+    footer #burger-btn {
+        display: none;
+    }
+
+    footer #myLinks {
+        display: none;
+    }
 }

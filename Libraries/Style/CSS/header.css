@@ -13,7 +13,6 @@ header {
     background-color: var(--primary);
     border-bottom-left-radius: 70%;
     border-bottom-right-radius: 70%;
-    /* padding: 0; */
     width: 100vw;
     position: sticky;
     top: 0;
@@ -26,13 +25,36 @@ main {
 }
 
 header .logo {
-    height: 10vh;
+    height: 8vh;
     margin: auto;
     display: block;
     filter: drop-shadow(0 0 5px white);
 }
 
+header #myLinks {
+    display: none;
+}
+
 @media screen and (min-width: 1000px) {
     
-    
+    header #myLinks {
+        width: fit-content;
+        margin: auto;
+        display: flex;
+    }
+
+    header #myLinks a {
+        padding: 10px;
+    }
+
+    header #left-links, #right-links {
+        justify-content: space-evenly;
+        width: 35vw;
+        display: flex;
+        flex-direction: row;
+    }
+
+    header #myLinks img:not(.logo) {
+        width: 30px;
+    }
 }

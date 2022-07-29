@@ -3,7 +3,7 @@
  */
 function showNav() {
     // le bouton tourne : la flèche pointe vers l'autre sens
-    let burgerbtn = document.querySelector('#burger-btn');
+    let burgerbtn = document.querySelector('footer #burger-btn');
     burgerbtn.style.transform == '' ? 
         // fait tourner le bouton de 180° dans le sens anti-horaire
         burgerbtn.style.transform += ' rotate(-180deg)' : 
