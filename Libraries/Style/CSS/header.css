@@ -31,13 +31,17 @@ header .logo {
     filter: drop-shadow(0 0 5px white);
 }
 
-header #myLinks a:not([href*="index.php"]) {
-    display: none;
+@media screen and (max-width: 900px) {
+    
+    header #myLinks a:not([href*="index.php"]) {
+        display: none;
+    }
 }
 
 
 
-@media screen and (min-width: 1000px) {
+
+@media screen and (min-width: 900px) {
 
     header {
         border-radius: 0;
@@ -45,6 +49,7 @@ header #myLinks a:not([href*="index.php"]) {
     }
     
     header #myLinks {
+        outline: 1px solid green;
         width: fit-content;
         margin: auto;
         display: flex;
