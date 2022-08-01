@@ -1,0 +1,17 @@
+#---------------
+# config
+# --------------
+
+# # Le serveur doit suivre les liens symbolique
+# Options  +followSymlinks
+
+# # Activation du module de réécriture d'url
+# RewriteEngine on
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# #--------------------------
+# # Règle de réécriture d'url
+# #--------------------------
+
+# RewriteRule ^ ./Libraries/Views [QSA,L]
+# # RewriteRule  ^ ./Libraries/Views/ [L,QSA]
