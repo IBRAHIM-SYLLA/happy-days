@@ -31,15 +31,16 @@ header .logo {
     filter: drop-shadow(0 0 5px white);
 }
 
+textarea {
+    resize: none;
+}
+
 @media screen and (max-width: 900px) {
     
     header #myLinks a:not([href*="index.php"]) {
         display: none;
     }
 }
-
-
-
 
 @media screen and (min-width: 900px) {
 

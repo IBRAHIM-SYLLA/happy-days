@@ -152,10 +152,18 @@ iframe {
     height: fit-content;
 }
 
+.presentation .contact-us {
+    display: flex;
+}
+
 @media screen and (max-width: 1000px) {
 
     .presentation {
         width: 100%;
+    }
+
+    .presentation .contact-us {
+        display: none;
     }
     
     .presentation .lines-around *:not(h1) {
