@@ -14,6 +14,7 @@ require_once '../Imports/header.php';
         <div class="field">
             <label for="email"><span class="required-symbol">-</span> Email</label>
             <input type="text" name="email" placeholder="email@mail.com" required>
+            <p id="mail-check"></p>
         </div>      
         
         <div class="field">

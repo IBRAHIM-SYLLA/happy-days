@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // si l'utilisateur a perdu le focus sur l'input
                 input.addEventListener('focusout', () => {
                     // si l'utilisateur n'a rien entré dans l'input
-                    if(input.value === "" && document.querySelector('p.field-alert') == null) {
+                    if(input.value === "" && document.querySelector('.field-alert') == null) {
                         let newElement = document.createElement('p');
                         newElement.className = 'field-alert';
 
@@ -84,17 +84,41 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then((response) => response.json())
     .then((response) => {
-        console.log(response);
-
-        let results = [];
-        // const val = str.toLowerCase();
-
         
-            console.log(response);
-            // let nom = response[i].nom;
-            // if (nom.toLowerCase().indexOf(val) > -1) {
-            //     results.push(nom);
-            // }
-        
+        const mailCheck = document.querySelector('#mail-check');
+        const mailInput = document.querySelector('input[name="email"]');
+
+        let mailArray = response.map((item) => item.email);
+        console.log(mailArray)
+
+        if(mailInput != null && mailCheck != null) {
+
+            mailInput.addEventListener('focusout', () => {
+                
+                let emailExists = mailArray.filter((email) => email === mailInput.value);
+
+                if(window.location.href.includes('inscription')) {
+                    if(emailExists.length >= 1) {
+                        mailCheck.textContent = 'Cet email existe déjà';
+                        mailCheck.style.color = 'red';
+                        mailCheck.style.fontStyle = 'italic';
+                    }
+                    else {
+                        mailCheck.textContent = '';
+                    }
+                }
+
+                if(window.location.href.includes('connexion')) {
+                    if(emailExists.length == 0) {
+                        mailCheck.textContent = 'Cet email n\'existe pas';
+                        mailCheck.style.color = 'red';
+                        mailCheck.style.fontStyle = 'italic';
+                    }
+                    else {
+                        mailCheck.textContent = '';
+                    }
+                }
+            })
+        }
     })
 })
