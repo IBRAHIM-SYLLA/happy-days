@@ -19,6 +19,23 @@
             <a href="../Views/contact.php"><img src="../Style/Icons/support.png" alt=""></a>
         </div>
     </div>
+
+    <div class="contact-us">
+            <h1>Nos réseaux</h1>
+        <ul>
+            <li id="fb-icon">
+                <a href="">facebook</a>
+            </li>
+            <li id="ig-icon">
+                <a href="">instagram</a>
+            </li>
+            <li id="li-icon">
+                <a href="">linkedin</a>
+            </li>
+        </ul>
+
+        <h1><a href="./Libraries/Views/contact.php">Nous contacter</a></h1>    
+    </div>
 </footer>
 
 </body>

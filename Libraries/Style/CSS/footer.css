@@ -70,7 +70,13 @@ footer .contact-us {
 }
 
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
+    footer {
+        height: fit-content;
+        transform: translateY(0);
+        font-family: Prompt;
+    }
+
     footer #burger-btn {
         display: none;
     }
@@ -81,5 +87,28 @@ footer .contact-us {
 
     footer .contact-us {
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+    }
+
+    footer #fb-icon, footer #li-icon, footer #ig-icon {
+        background-position: center left;
+        background-repeat: no-repeat;
+        background-size: 15px;
+    }
+
+    footer .contact-us ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        list-style: none;
+        width: 30%;
+    }
+
+    footer .contact-us li {
+        padding-left: 20px;
     }
 }

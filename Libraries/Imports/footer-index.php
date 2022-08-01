@@ -19,25 +19,21 @@
     </div>
 
     <div class="contact-us">
-    <div class="lines-around">
-        <span class="line"></span>
-        <h1>Nos réseaux</h1>
-        <span class="line"></span>
-    </div>
-    <ul>
-        <li id="fb-icon">
-            <a href="">facebook</a>
-        </li>
-        <li id="ig-icon">
-            <a href="">instagram</a>
-        </li>
-        <li id="li-icon">
-            <a href="">linkedin</a>
-        </li>
-    </ul>
+            <h1>Nos réseaux</h1>
+        <ul>
+            <li id="fb-icon">
+                <a href="">facebook</a>
+            </li>
+            <li id="ig-icon">
+                <a href="">instagram</a>
+            </li>
+            <li id="li-icon">
+                <a href="">linkedin</a>
+            </li>
+        </ul>
 
-    <h1><a href="./Libraries/Views/contact.php">Nous contacter</a></h1>    
-</div>
+        <h1><a href="./Libraries/Views/contact.php">Nous contacter</a></h1>    
+    </div>
 </footer>
     
 </body>
