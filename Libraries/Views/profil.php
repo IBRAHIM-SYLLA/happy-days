@@ -1,6 +1,7 @@
 <?php
 require_once '../Controllers/profil.php';
 require_once '../Imports/header.php';
+var_dump($dataUser[0]);
 ?>
 <section id="profil">
     <h1 id="title">Votre profil</h1>
@@ -38,7 +39,7 @@ require_once '../Imports/header.php';
         <button id="update" type="submit" name="update">Mettre a jour</button>
     </form>
 
-    <?php if($_SESSION['utilisateurs'][0]['id_right'] == 2022): ?>
+    <?php if($dataUser[0]['id_right'] == '2022'): ?>
         <div id="admin">
             <h2>Vous possédez les droits d'administrateur</h2>
             <a href="./admin.php">Espace Admin</a>

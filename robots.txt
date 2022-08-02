@@ -1,0 +1,16 @@
+User-agent: *
+
+# interdit aux robots de visiter et lister les pages réservées à l'admin
+disallow: /Libraries/Views/admin.php 
+
+    # users
+disallow: /Libraries/Views/creerUser.php
+disallow: /Libraries/Views/lireUser.php
+disallow: /Libraries/Views/modifierUser.php
+disallow: /Libraries/Views/gestionUser.php
+
+    # events
+disallow: /Libraries/Views/creerEvent.php
+disallow: /Libraries/Views/lireEvent.php
+disallow: /Libraries/Views/modifierEvent.php
+disallow: /Libraries/Views/gestionEvent.php
