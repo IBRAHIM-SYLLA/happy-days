@@ -1,9 +1,10 @@
 <?php 
 require_once '../Controllers/user.php'; 
-include_once '../Imports/header.php';
+require_once '../Imports/header.php';
 ?>
 
 
+<section id="inscription">
 <form class="info-form" action="inscription.php" method="post">
     <legend>Inscription</legend>
 
@@ -58,11 +59,13 @@ include_once '../Imports/header.php';
         <div class="field">
             <label for ="email"><span class="required-symbol">-</span> Email</label>
             <input id="email" type="email" name="email" placeholder="email@mail.com" autocomplete="off" required>
+            <p id="mail-check"></p>
         </div>
 
         <div class="field">
             <label for ="password"><span class="required-symbol">-</span> Mot de passe</label>
             <input id="password" type="password" name="password" placeholder="Mot de passe" required/>
+            <p id="password-check"></p>
         </div>
 
         <div class="field">
@@ -79,7 +82,7 @@ include_once '../Imports/header.php';
 
     <p class="connexion-suggestion">Vous avez déjà un compte ? <br><a href="connexion.php">Connectez vous</a></p>
     
-    <div style="overflow: auto;">
+    <div id="btn-cont" style="overflow: auto;">
         <button type="button" id="prevBtn" class="icon-btn"></button>
 
         <button type="button" id="nextBtn" class="icon-btn"></button>
@@ -88,5 +91,8 @@ include_once '../Imports/header.php';
     <div style="text-align:center; margin-top:40px;" id="step-cont"></div>
 
 </form>
+
+</section>
+<div class="error-cont"></div>
 
 <?php include_once '../Imports/footer.php'; ?>

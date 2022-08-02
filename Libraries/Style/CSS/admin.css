@@ -1,0 +1,39 @@
+@import url(palette.css);
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+
+#admin #admin-card {
+    font-family: Prompt;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    background-color: rgba(128, 128, 128, 0.2);
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#admin .line {
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    width: 80%;
+    height: 0;
+    margin: 20px auto;
+}
+
+#admin a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    background-color: white;
+    width: fit-content;
+    margin: auto;
+    box-shadow: 0 0 2px grey;
+    border-radius: 5px;
+}
+
+#admin a:hover {
+    background-color: rgba(128, 128, 128, 0.1);
+}

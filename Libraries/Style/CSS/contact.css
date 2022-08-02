@@ -1,0 +1,55 @@
+
+
+    #contact {
+        font-family: "Prompt";
+    }
+
+    #contact h1 {
+        color: var(--primary);
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    #contact form {
+        background-color: var(--primary-light);
+        border: 5px solid var(--primary);
+        border-bottom-width: 10px;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 100px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact .field {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact .field label {
+        font-weight: bold;
+    }
+
+    #contact .field input, #contact .field textarea {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 15px;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: rgba(255,255,255,0.8);
+    }
+
+    #contact button[name="contact"] {
+        font-family: "Prompt";
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 14px;
+        width: 70%;
+        background-color: white;
+        border: none;
+        border-radius: 20px;
+        margin: auto;
+        padding: 10px;
+    }

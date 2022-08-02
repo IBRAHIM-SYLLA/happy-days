@@ -2,8 +2,10 @@
 session_start();
 require_once '../Controllers/connexion.php';
 require_once '../Imports/header.php';
+var_dump($_SESSION);
 ?>
 
+<section id="connexion">
 <form class="info-form" action="" method="post">
     <legend>Connexion</legend>
     
@@ -12,18 +14,20 @@ require_once '../Imports/header.php';
 
         <div class="field">
             <label for="email"><span class="required-symbol">-</span> Email</label>
-            <input type="text" name="email" id="" placeholder="email@mail.com" required>
+            <input type="text" name="email" placeholder="email@mail.com" required>
+            <p id="mail-check"></p>
         </div>      
         
         <div class="field">
             <label for="password"><span class="required-symbol">-</span> Mot de passe</label>
-            <input type="text" name="password" id="" placeholder="Mot de passe" required>
+            <input type="password" name="password" placeholder="Mot de passe" required>
         </div>
 
         <p class="connexion-suggestion">Vous n'avez pas encore de compte ? <a href="inscription.php">Inscrivez-vous</a></p>
         
-            <button id="register" type="submit" name="register" class="icon-btn">Se connecter</button>
-        
+        <div id="btn-cont">
+            <button id="register" type="submit" name="connect" class="icon-btn">Se connecter</button>
+        </div>
     
         <!-- <div style="overflow:auto;">
             <button type="submit" id="privBtn" name="connect" class="icon-btn"></button>
@@ -35,5 +39,8 @@ require_once '../Imports/header.php';
 
 </form>
 
-<?php include_once '../Imports/footer.php';
+</section>
+<div class="error-cont"></div>
+
+<?php require_once '../Imports/footer.php';
 ?>

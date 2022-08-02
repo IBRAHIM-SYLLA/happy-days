@@ -1,0 +1,140 @@
+@import url(./palette.css);
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+#gestionEvent {
+    margin-top: 5%;
+}
+
+#gestionEvent .heading {
+    font-family: Prompt;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+}
+
+#gestionEvent .new-event {
+    background-image: url(../Icons/add-event.png);
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: left 10px center;
+    text-align: right;
+    /* font-size: 22px; */
+    font-family: Prompt;
+    padding: 10px;
+    width: fit-content;
+    padding-left: 40px;
+    display: block;
+    margin: 20px auto;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    background-color: var(--primary-light);
+}
+
+#gestionEvent table {
+    max-width: 100vw;
+    margin-bottom: 60px;
+}
+
+#gestionEvent thead {
+    display: none;
+}
+
+/* #gestionEvent thead tr {
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    width: 25%;
+} */
+
+#gestionEvent tbody tr:nth-child(even) {
+    background-color: rgba(0,0,0,0.2);
+}
+
+#gestionEvent tbody tr:nth-child(odd) {
+    background-color: rgba(0,0,0,0.1);
+} 
+
+#gestionEvent tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    font-family: Prompt;
+    margin: 5px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+#gestionEvent tbody tr td {
+    margin: 5px;
+    line-height: 30px;
+}
+
+.id-row {
+    display: block;
+    width: fit-content;
+}
+
+.link-row {
+    width: 100%;
+    z-index: 0;
+    align-items: center;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.link-row a {
+    padding: 0 10px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    border-width: 0;
+    background-color: var(--primary-light);
+}
+
+.id-row::before {
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    content: "ID";
+}
+
+.name-row::before {
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    content: "Nom";
+}
+
+.date-row::before {
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    content: "Date";
+}
+
+#gestionEvent #back {
+    background-image: url(../Icons/left-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: left 10px center;
+    text-align: right;
+    font-size: 22px;
+    font-family: Prompt;
+    padding: 10px;
+    padding-left: 40px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    border-width: 0;
+    background-color: var(--primary-light);
+}
