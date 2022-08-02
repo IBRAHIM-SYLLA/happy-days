@@ -55,23 +55,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if(inputs.length > 0) {
         inputs.forEach((input) => {
 
-                // si l'utilisateur a perdu le focus sur l'input
-                input.addEventListener('focusout', () => {
-                    // si l'utilisateur n'a rien entré dans l'input
-                    if(input.value === "" && document.querySelector('.field-alert') == null) {
-                        let newElement = document.createElement('p');
-                        newElement.className = 'field-alert';
+            // si l'utilisateur a perdu le focus sur l'input
+            input.addEventListener('focusout', () => {
 
-                        // TODO: vérifier si le field-alert n'existe pas déjà
-                            // créé un élément provisoire
-                        input.after(newElement);
-                        newElement.textContent = "Ce champ est obligatoire";
+                // si l'input est vide, créer un élément p avec la class field-alert
+                if(input.value == "") {
+                    if(document.querySelector('p.field-alert') == null) {
+                        let fieldAlert = document.createElement('p');
+                        fieldAlert.className = 'field-alert';
+                        fieldAlert.textContent = "Ce champ est obligatoire";
+                        input.after(fieldAlert);
                     }
-                    // sinon, si l
-                    else if(input.value !== "" && !!document.querySelector('field-alert')) {
-                        document.querySelector('field-alert').textContent = "";
-                    }
-                })
+                }
+                // sinon, supprimer l'élément p avec la class field-alert
+                else {
+                    document.querySelector('p.field-alert').remove();
+                }
+            })
         })
     }
 

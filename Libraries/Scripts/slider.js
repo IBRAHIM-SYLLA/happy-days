@@ -15,7 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let slide = new Array(
             root +'Style/Images/Slider/1.jpg', 
             root +'Style/Images/Slider/2.jpg', 
-            root +'Style/Images/Slider/3.jpg'
+            root +'Style/Images/Slider/3.jpg',
+            root +'Style/Images/Slider/4.jpg',
+            root +'Style/Images/Slider/5.jpg'
         );
 
 

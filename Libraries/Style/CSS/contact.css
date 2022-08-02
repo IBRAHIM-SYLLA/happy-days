@@ -1,4 +1,4 @@
-@media screen and (max-width: 1000px){
+
 
     #contact {
         font-family: "Prompt";
@@ -16,6 +16,7 @@
         border-bottom-width: 10px;
         width: 90%;
         margin: auto;
+        margin-bottom: 100px;
         padding: 10px;
         display: flex;
         flex-direction: column;
@@ -52,4 +53,3 @@
         margin: auto;
         padding: 10px;
     }
-}
