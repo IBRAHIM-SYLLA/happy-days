@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,16 +23,7 @@
 <header>
     <div id="myLinks">
         <div id="left-links">
-            <?php if(!empty($_SESSION)) { ?>
-                <a href="./Libraries/Views/deconnexion.php">
-                    <img src="./Libraries/Style/Icons/logout.png" alt="">
-                    <p>Déconnexion</p>
-                </a>
-                <a href="./Libraries/Views/profil.php">
-                    <img src="./Libraries/Style/Icons/avatar.png" alt="">
-                    <p>Profil</p>
-                </a>
-            <?php } else { ?>
+            <?php if(empty($_SESSION)) { ?>
                 <a href="./Libraries/Views/connexion.php">
                     <img src="./Libraries/Style/Icons/login.png" alt="">
                     <p>Connexion</p>
@@ -40,6 +32,15 @@
                     <img src="./Libraries/Style/Icons/add-user.png" alt="">
                     <p>Inscription</p>
                 </a>
+                <?php } else { ?>
+                    <a href="./Libraries/Views/deconnexion.php">
+                        <img src="./Libraries/Style/Icons/logout.png" alt="">
+                        <p>Déconnexion</p>
+                    </a>
+                    <a href="./Libraries/Views/profil.php">
+                        <img src="./Libraries/Style/Icons/avatar.png" alt="">
+                        <p>Profil</p>
+                    </a>
                 <?php } ?>
         </div>
         

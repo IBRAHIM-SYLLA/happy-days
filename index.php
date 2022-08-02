@@ -1,8 +1,6 @@
 <?php
 require_once('./Libraries/Imports/header-index.php');
 
-session_start();
-
 if(isset($_POST['deconnex'])) {
     session_destroy();
     header('Location: ./Libraries/Views/connexion.php');
