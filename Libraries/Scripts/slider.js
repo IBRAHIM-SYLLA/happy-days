@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         // pour ajouter une image au slider, il faut la renseigner dans l'array
         let slide = new Array(
-            root +'Style/Images/Slider/1.jpg', 
+            root +'Style/Images/Slider/P1014511.png', 
             root +'Style/Images/Slider/2.jpg', 
             root +'Style/Images/Slider/3.jpg',
             root +'Style/Images/Slider/4.jpg',

@@ -1,7 +1,7 @@
 <?php
+require_once '../Imports/header.php';
 require_once '../Models/User.php';
 require_once '../Controllers/admin.php';
-require_once '../Imports/header.php';
 $idUser = $_GET['id'];
 
 $user = new User();
@@ -9,11 +9,11 @@ $dataUser = $user->selectAllWhereId($idUser);
 ?>
 
 <section id="modifierUser">
-<a href="gestionUser.php" id="back">Retour</a>
+    <a href="gestionUser.php" id="back">Retour</a>
 
 
-<form action="" method="post" id="modifier" name="user-card">
-
+    <form action="" method="post" id="modifier" name="user-card">
+        <h4 class="err-msg"><?= $error ?></h4>
         <div class="field">
             <img src="../Style/Icons/balance.png" class="icon" alt="">
             <select name="id_right" id="">
@@ -42,7 +42,7 @@ $dataUser = $user->selectAllWhereId($idUser);
         <button id="update" type="submit" name="update">Mettre a jour</button>
     </form>
 
-    </section>
+</section>
 <?php
 require_once '../Imports/footer.php';
 ?>

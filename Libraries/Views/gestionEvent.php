@@ -1,6 +1,6 @@
 <?php
-require_once '../Controllers/admin.php';
 require_once '../Imports/header.php';
+require_once '../Controllers/admin.php';
 ?>
 
 <section id="gestionEvent">

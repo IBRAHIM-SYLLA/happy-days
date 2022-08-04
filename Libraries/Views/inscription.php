@@ -1,13 +1,13 @@
 <?php 
-require_once '../Controllers/user.php'; 
 require_once '../Imports/header.php';
+require_once '../Controllers/user.php'; 
 ?>
 
 
 <section id="inscription">
 <form class="info-form" action="inscription.php" method="post">
     <legend>Inscription</legend>
-
+        <h4 class="err-msg"><?= $error ?></h4>
     <div class="tab">
         <p class="sub-text">Parlez-nous un peu de vous...</p>
         <div class="field">

@@ -2,7 +2,7 @@
 require_once '../Models/User.php';
 require_once 'functions.php';
 $user = new User();
-
+$error = "";
 if (isset($_POST['register'])){
     // je vérifie si les champs sont vide
     if (!empty($_POST['civility']) && !empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['email']) && !empty($_POST['password']) &&
@@ -33,25 +33,26 @@ if (isset($_POST['register'])){
                     // j'enregistre en base de données
                     $user->register($civility, $firstname, $lastname, $email, $password, $adress, $zip_code, $city, $phone_number);
                     sendMail($email, $lastname);
+                    header('Location: ../../index.php');
                 }
                 else{
                     // si un l'user existe déja
-                    echo 'utilisateur déja existant';
+                    $error = 'utilisateur déja existant';
                 }
             }
             else{
                 // si le mot de passe et la confirmation ne sont pas identique
-                echo 'les mots de passes ne sont pas identique';
+                $error = 'les mots de passes ne sont pas identique';
             }
         }
         else{
             // si le contenu des champs ne correspondes pas a l'expressions
-            echo 'Email ou numéros de téléphone invalide';
+            $error = 'Email ou numéros de téléphone invalide';
         }
     }
     else{
         // si un ou des champs sont vide
-        echo "champ vide";
+        $error = "champ vide";
     }
         // var_dump($_POST);
     }

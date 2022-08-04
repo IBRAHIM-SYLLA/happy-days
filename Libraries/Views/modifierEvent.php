@@ -1,7 +1,7 @@
 <?php
+require_once '../Imports/header.php';
 require_once '../Controllers/admin.php';
 require_once '../Models/Event.php';
-require_once '../Imports/header.php';
 
 $idEvent = $_GET['id'];
 $dataEvent = $event->selectAllWhereId($idEvent);
@@ -11,6 +11,7 @@ $dataEvent = $event->selectAllWhereId($idEvent);
     <a href="gestionEvent.php" id="back">Retour</a>
 
     <form action="" method="post" id="event-card">
+        <h4 class="err-msg"><?= $error ?></h4>
         <img id="event-img" src="../uploads/<?= $dataEvent[0]['image'] ?>" alt="Image de l'évènement">
 
         <div class="field">        

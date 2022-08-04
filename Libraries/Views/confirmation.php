@@ -1,7 +1,7 @@
 <?php 
+require_once "../Imports/header.php";
 require_once '../Controllers/paiement.php';
 require_once '../Controllers/functions.php';
-require_once "../Imports/header.php";
 $user->update_member_state($idUser);
 sendMailPaiement($emailUser);
 ?>

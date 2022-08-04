@@ -1,6 +1,6 @@
 <?php
-require_once '../Controllers/paiement.php';
 require_once '../Imports/header.php';
+require_once '../Controllers/paiement.php';
 ?>
 
     <form action="" method="post">

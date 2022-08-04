@@ -1,4 +1,5 @@
 <?php
+require_once '../Imports/header.php';
 require_once '../Models/User.php';
 
 $idUser = $_GET['id'];
@@ -7,7 +8,6 @@ $user = new User();
 $dataUser = $user->selectAllWhereId($idUser);
 // var_dump($dataUser);
 
-require_once '../Imports/header.php';
 ?>
 
 <section id="lireUser">

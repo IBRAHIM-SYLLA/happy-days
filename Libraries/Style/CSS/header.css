@@ -35,6 +35,11 @@ textarea {
     resize: none;
 }
 
+.err-msg {
+    color: red;
+    text-align: center;
+}
+
 @media screen and (max-width: 900px) {
     
     header #myLinks a:not([href*="index.php"]) {

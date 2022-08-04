@@ -1,7 +1,7 @@
 <?php
 require_once '../Models/User.php';
 require_once 'functions.php';
-
+$error = "";
 if (isset($_POST['connect'])){
 
     if (!empty($_POST['email']) && !empty($_POST['password'])){
@@ -21,19 +21,19 @@ if (isset($_POST['connect'])){
                     header('Location: ../../index.php');
                 }
                 else{
-                    echo 'mot de passe incorrect';
+                    $error = "mot de passe incorrect";
                 }
             }
             else{
-                echo 'user inconnu';
+                $error = 'user inconnu';
             }
         }
         else{
-            echo 'email invalide';
+            $error = 'email invalide';
         }
     }
     else {
-        echo 'champ vide';
+        $error = 'champ vide';
     }
 }
 ?>

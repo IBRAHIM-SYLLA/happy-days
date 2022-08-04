@@ -1,8 +1,7 @@
 <?php
-session_start();
-require_once '../Controllers/connexion.php';
 require_once '../Imports/header.php';
-var_dump($_SESSION);
+require_once '../Controllers/connexion.php';
+
 ?>
 
 <section id="connexion">
@@ -11,7 +10,7 @@ var_dump($_SESSION);
     
     <div class="tab final-step">
         <p class="sub-text">Entrez vos identifiants</p>
-
+           <h4 class="err-msg"><?= $error ?></h4>
         <div class="field">
             <label for="email"><span class="required-symbol">-</span> Email</label>
             <input type="text" name="email" placeholder="email@mail.com" required>
@@ -28,11 +27,6 @@ var_dump($_SESSION);
         <div id="btn-cont">
             <button id="register" type="submit" name="connect" class="icon-btn">Se connecter</button>
         </div>
-    
-        <!-- <div style="overflow:auto;">
-            <button type="submit" id="privBtn" name="connect" class="icon-btn"></button>
-            <button type="submit" id="nextBtn" name="connect" class="icon-btn"></button>
-        </div> -->
     
         <div style="text-align:center; margin-top:40px;" id="step-cont"></div>
     </div>

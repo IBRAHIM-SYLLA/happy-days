@@ -1,10 +1,10 @@
 <?php
-require_once '../Controllers/profil.php';
 require_once '../Imports/header.php';
-var_dump($dataUser[0]);
+require_once '../Controllers/profil.php';
 ?>
 <section id="profil">
     <h1 id="title">Votre profil</h1>
+    <h4 class="err-msg"><?= $error ?></h4>
     <a href="../../index.php" class="back-btn">Retour</a>
     <form action="" method="post">
         <div class="field">        

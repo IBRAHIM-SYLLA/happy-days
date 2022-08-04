@@ -1,9 +1,8 @@
 <?php
-session_start();
 require_once '../Models/User.php';
 require_once 'functions.php';
 
-
+$error = "";
 $user = new User();
 $dataUser = $user->selectAllWhereId($_SESSION['utilisateurs'][0]['id']);
 
@@ -28,15 +27,15 @@ if (isset($_POST['update'])){
                 header('Refresh: 0');
             }
             else{
-                echo "les mot de passe ne sont pas identique";
+                $error = "les mot de passe ne sont pas identique";
             }
         }
         else{
-            echo "numéros de téléphone ou email invalide";
+            $error = "numéros de téléphone ou email invalide";
         }
     }
     else{
-        echo "champs vide";
+        $error = "champs vide";
     }
 }
 ?>

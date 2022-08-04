@@ -1,7 +1,6 @@
 <?php
-// require_once '../Models/Event.php';
-require_once '../Controllers/event.php';
 require_once '../Imports/header.php';
+require_once '../Controllers/event.php';
 ?>
 <section id="allEvents">
     <?php foreach ($fetchAllEvents as $fetchAllEvent): ?>

@@ -1,9 +1,11 @@
-<?php require_once '../Controllers/admin.php';
-require_once '../Imports/header.php'; ?>
+<?php
+require_once '../Imports/header.php';
+require_once '../Controllers/admin.php';
+?>
 
 <form class="info-form" action="creerUser.php" method="post">
     <legend>Inscription</legend>
-
+    <h4 class="err-msg"><?= $error ?></h4>
     <select name="id_right" id="">
         <option>1</option>
         <option>2022</option>

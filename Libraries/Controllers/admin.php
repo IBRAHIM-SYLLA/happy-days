@@ -2,7 +2,7 @@
 require_once '../Models/User.php';
 require_once '../Models/Event.php';
 require_once '../Controllers/functions.php';
-
+$error = "";
 // on instencie les class
 
 // ---------------------------- User ------------------------//
@@ -11,10 +11,9 @@ $user = new User();
 $allUsers = $user->selectAllData();
 
 function updateUserAdmin($email, $adress, $zip_code, $city, $id_right, $phone_number){
-
     $user = new User();
     $idUser = $_GET['id'];
-
+    $error = "";
         if (!empty($_POST['id_right']) && !empty($_POST['email']) && !empty($_POST['adress']) && !empty($_POST['zip_code']) && !empty($_POST['city']) && !empty($_POST['phone_number'])){
 
             $email = security($_POST['email']);
@@ -30,21 +29,21 @@ function updateUserAdmin($email, $adress, $zip_code, $city, $id_right, $phone_nu
                     header('Refresh: 0');
             }
             else{
-                echo "numéros de téléphone ou email invalide";
+                $error = "numéros de téléphone ou email invalide";
             }
         }
         else{
-            echo "champs vide";
+            $error = "champs vide";
         }
 }
 
 if (isset($_POST['update'])){
-    updateUserAdmin($_POST['email'], $_POST['adress'], $_POST['zip_code'], $_POST['city'], $_POST['id_right'], $_POST['phone_number']);
+    updateUserAdmin($_POST['email'], $_POST['adress'], $_POST['zip_code'], $_POST['city'], $_POST['id_right'], $_POST['phone_number'], $error);
 }
 
 function registerAdmin($civility, $firstname, $lastname, $email, $password, $adress, $zip_code, $city, $id_right, $phone_number){
     $user = new User();
-
+    $error = "";
     if (!empty($_POST['civility']) && !empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['email']) && !empty($_POST['password']) &&
     !empty($_POST['password_conf']) && !empty($_POST['adress']) && !empty($_POST['zip_code']) && !empty($_POST['city']) && !empty($_POST['id_right']) &&
     !empty($_POST['phone_number'])){
@@ -72,16 +71,16 @@ function registerAdmin($civility, $firstname, $lastname, $email, $password, $adr
                     sendMail($email, $lastname);
                 }
                 else{
-                    echo 'user récurant';
+                    $error = 'user récurant';
                 }
             }
         }
         else{
-            echo 'Email ou numéros de téléphone invalide';
+            $error = 'Email ou numéros de téléphone invalide';
         }
     }
     else{
-        echo "champ vide";
+        $error = "champ vide";
     }
 }
 
@@ -99,7 +98,7 @@ $event = new Event();
 $allEvents = $event->selectAllData();
 
 function update_event($name, $date, $heuredebut, $description){
-
+    $error = "";
     if(!empty($_POST['name']) && !empty($_POST['date']) && !empty($_POST['heuredebut']) && !empty($_POST['description'])){
 
         $idEvent = $_GET['id'];
@@ -114,7 +113,7 @@ function update_event($name, $date, $heuredebut, $description){
         header('Refresh: 0');
     }
     else{
-        echo 'champs vide';
+        $error = 'champs vide';
     }
 }
 

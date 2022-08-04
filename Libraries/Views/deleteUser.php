@@ -5,11 +5,10 @@ $idUser = $_GET['id'];
 
 $user = new User();
 $dataUser = $user->selectAllWhereId($idUser);
-// var_dump($dataUser);
 
 if (isset($_POST['delete'])){
     $user->delete($idUser);
-    header('Location: gestionUtilisateurs.php');
+    header('Location: gestionUser.php');
 }
 require_once '../Imports/header.php';
 ?>

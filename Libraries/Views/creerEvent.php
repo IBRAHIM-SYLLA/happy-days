@@ -1,7 +1,5 @@
 <?php
 require_once '../Controllers/event.php';
-
-var_dump($_POST);
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +12,7 @@ var_dump($_POST);
 </head>
 <body>
     <form action="" method="post" enctype="multipart/form-data">
+        <h4 class="err-msg"><?= $error ?></h4>
         <label for="name">Nom:</label>
         <input type="text" name="name" placeholder="Nom de l'event" id="">
 

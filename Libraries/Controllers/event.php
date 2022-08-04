@@ -7,7 +7,7 @@ require_once 'functions.php';
 $event = new Event();
 $users = new User();
 $dataUsers = $users->selectAllData();
-// var_dump($dataUsers);
+$error = "";
 if (isset($_POST['creer'])){
 
     if (!empty($_POST['name']) && !empty($_POST['description']) &&
@@ -39,13 +39,13 @@ if (isset($_POST['creer'])){
             // On vérifie l'absence de l'éxtension dans les clés de $allowed
             if(!array_key_exists($extension, $allowed) || !in_array($filetype, $allowed)){
                 // soit l'extension soit le type est incorrect
-                echo "format de fichier incorrect";
+                $error = "format de fichier incorrect";
             }
 
              // ici le type est correct
             // on limita a 1 mo
             if ($filesize > 1024 * 1024){
-                echo "fichier trop lourd";
+                $error = "fichier trop lourd";
             }
 
             // grâce au fichier htaccess on a pas accés au dossier upload via l'url
@@ -56,7 +56,7 @@ if (isset($_POST['creer'])){
 
             // on deplace le fichier en le rennomant
             if(!move_uploaded_file($_FILES["image"]["tmp_name"], $newfilename)){
-                echo "l'upload a échoué";
+                $error = "l'upload a échoué";
             }
 
             // on interdit l'éxécution du fichier
@@ -71,7 +71,7 @@ if (isset($_POST['creer'])){
         }
     }
     else{
-        echo 'champ vide';
+        $error = 'champ vide';
     }
 
     // if (!empty($_POST['date'])) {

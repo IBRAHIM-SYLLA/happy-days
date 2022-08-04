@@ -1,7 +1,7 @@
 <?php
+require_once '../Imports/header.php';
 require_once '../Controllers/admin.php';
 require_once '../Models/Event.php';
-require_once '../Imports/header.php';
 
 $idEvent = $_GET['id'];
 
